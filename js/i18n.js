@@ -1,0 +1,2244 @@
+const LANG_STORAGE_KEY = 'melbet_lang';
+const SUPPORTED_LANGS = ['eng', 'arab', 'franch', 'esp', 'farsi', 'mongol', 'somali', 'portug', 'amharic', 'turk', 'russian'];
+
+const I18N = {
+  eng: {
+    dir: 'ltr',
+    common: {
+      logoAria: 'MelBet home',
+      toggleMenu: 'Toggle menu',
+      navAria: 'Main navigation',
+      nav: ['Home', 'Programs', 'Benefits', 'FAQ', 'Contact']
+    },
+    index: {
+      title: 'Melbet Partnerships Program',
+      description:
+        'Join Melbet Partnerships Program and start earning with Affiliate, Payment Agent and E-payment programs.',
+      topCta: 'Start Earning Today',
+      heroKicker: 'MelBet Official Partnership',
+      heroTitle: 'Join Melbet Partnerships Program',
+      heroCopy:
+        'Become part of our global network and start earning with our comprehensive partnership programs designed for success in the MENA region and beyond.',
+      heroButtons: ['Start Earning Today', 'Our Partnership Programs'],
+      statsTitle: 'Key Stats',
+      stats: [
+        '<strong>10 000+</strong> Active Partners',
+        '<strong>$5M+</strong> Paid in Commissions',
+        '<strong>120+</strong> Countries Covered',
+        '<strong>24/7</strong> Partner Support'
+      ],
+      programsKicker: 'Programs',
+      programsTitle: 'Our Partnership Programs',
+      programsCopy:
+        'Choose the program that matches your skills and start generating revenue with one of the leading platforms in the industry.',
+      programs: [
+        {
+          title: 'Affiliate Partner Program',
+          copy:
+            'Maximize your earnings with our multi-tiered revenue model designed to reward performance and growth.',
+          items: [
+            '25% to 50% commission on player revenue through your promo code',
+            'Potential for increased commission rates based on performance',
+            'Opportunity to become a Master Account with 3% additional commission',
+            'Demo accounts available for marketing purposes ($2,000-$10,000)',
+            'CPA Program: $10 direct bonus for each qualifying player'
+          ],
+          cta: 'Join Affiliate Program'
+        },
+        {
+          title: 'Teamcash program',
+          copy:
+            'Become a financial solution provider in your country and earn commissions on cash transactions.',
+          items: [
+            'Provide deposit and withdrawal services to players in your region',
+            'Work directly with our company app',
+            'Low startup investment of $50 USD',
+            'Must be 18+ years old',
+            'Be the trusted local payment solution for our platform'
+          ],
+          cta: 'Join Teamcash program'
+        },
+        {
+          title: 'E-payment Agent Program',
+          copy:
+            'Leverage digital payment solutions to serve players and earn competitive commissions.',
+          items: [
+            'Process digital payments and transfers for players',
+            'Work with various e-payment platforms and methods',
+            'Competitive commission structure on all transactions',
+            'Access to dedicated support team for technical issues',
+            'Real-time reporting and analytics dashboard'
+          ],
+          cta: 'Join E-payment Program'
+        }
+      ],
+      benefitsKicker: 'Benefits',
+      benefitsTitle: 'Why Partner With Us?',
+      benefitsCopy: 'We provide everything you need to succeed in your partnership journey.',
+      benefits: [
+        {
+          title: 'Proven Revenue Model',
+          copy: 'Our partnership programs are designed with your success in mind, offering multiple revenue streams.'
+        },
+        {
+          title: 'Dedicated Support',
+          copy: 'Get access to our dedicated partner support team to help you maximize your earnings.'
+        },
+        {
+          title: 'Marketing Tools',
+          copy: 'Access a wide range of marketing materials and tools to help promote our platform.'
+        },
+        {
+          title: 'Global Reach',
+          copy: 'Tap into our international user base and expand your business globally.'
+        }
+      ],
+      faqKicker: 'FAQ',
+      faqTitle: 'Frequently Asked Questions',
+      faqCopy: 'Have a question? We might have already answered it. Browse the frequently asked questions below.',
+      faq: [
+        {
+          q: 'What is Melbet?',
+          a: 'A global internet platform operating for over 12 years and offers a full range of online entertainment and gambling services. The Melbet online operates in dozens of countries around the world, offering bookmaker services for sports, eSports, and casino games of all popular categories.'
+        },
+        {
+          q: 'What are the age requirements to join?',
+          a: 'You must be 18 years or older to participate in any of MelBet\'s partnership programs. Additional requirements may vary depending on the country and specific program.'
+        },
+        {
+          q: 'How does the Affiliate Program work?',
+          a: 'The Affiliate Program allows you to earn commissions by bringing new players to the MelBet platform. You receive a commission ranging from 25% to 50% of the revenue generated by players you register using your promotional code. You can also become a master account and receive an additional 3% commission on your network. For further explanation a manager will help you on your journey with us.'
+        },
+        {
+          q: 'What is the Teamcash?',
+          a: 'Melbet Teamcash refers to Cash App, a popular mobile payment service, which allows for the official agents to make deposits or withdrawals for players into their Melbet accounts.'
+        },
+        {
+          q: 'What is the E-Payment Program?',
+          a: 'To be an e-payment agent is to be a payment agent for the company in your country, this agents are responsible for making deposits and withdrawals for player into their Melbet accounts via specific local banks in the country, the agents will be available 24/7 for the players on the website\'s deposit and withdrawals pages. For more information regarding the profit and the work terms the manager will help you.'
+        },
+        {
+          q: 'What is the Teamcash Program?',
+          a: 'The Teamcash Agent Program allows you to become a financial solutions provider in your area. As a payment agent, you will offer cash deposit and withdrawal services to players in your region, and you will earn a commission on these transactions.'
+        },
+        {
+          q: 'What is the CPA Program?',
+          a: 'The CPA (Cost Per Action) program gives you a direct bonus of $10 for each qualified player you register. This is in addition to the regular commission system, providing you with an additional source of income. The commission vary depending on the country.'
+        },
+        {
+          q: 'Do you offer demo accounts for marketing?',
+          a: 'Yes, we provide demo accounts with values ranging from $2,000 to $10,000 for marketing purposes. These accounts allow you to showcase our platform to potential customers without the need to use real money.'
+        },
+        {
+          q: 'What is the startup cost for becoming a Teamcash?',
+          a: 'The initial investment cost to start as a payment agent is only $50 USD. This low cost makes the program accessible to many people interested in starting a business in payment services. The initial investment vary depending on the country.'
+        },
+        {
+          q: 'How do I work as a Teamcash agent?',
+          a: 'As a Teamcash agent, you will use the dedicated Melbet application to work directly with the company. You will process deposit and withdrawal requests for players in your area and receive a predetermined commission on each transaction.'
+        },
+        {
+          q: 'What is the difference between a Teamcash and an E-Payment Agent?',
+          a: 'A Teamcash Agent primarily deals with physical cash transactions and all payment methods which he is able to provide, while an E-Payment Agent deals with digital payments and electronic transfers with specific bank. Both provide valuable services to players in areas where traditional payment options are limited.'
+        },
+        {
+          q: 'Which e-payment banks can I work with?',
+          a: 'You can work with a variety of e-payment banks and methods available in your area. This includes e-wallets, bank transfers, and prepaid payment cards. Our support team will help you determine the best options for your region.'
+        },
+        {
+          q: 'How and when do I receive my commissions?',
+          a: 'Commissions are paid regularly according to the agreed payment schedule. For affiliate partners and e-payments are typically made weekly. For payment Teamcash agents are monthly, commissions are calculated on a per-transaction basis. We provide a comprehensive dashboard where you can track your earnings and payment requests.'
+        },
+        {
+          q: 'What withdrawal methods are available?',
+          a: 'We provide a variety of withdrawal methods including bank transfers, e-wallets, and deposits into Teamcash app. Available options vary by country, and our support team can help you choose the best method for your region.'
+        },
+        {
+          q: 'How can I contact the partnerships team?',
+          a: 'You can contact our partner support team via email and Telegram or by list of contacts down in the contact section.'
+        },
+        {
+          q: 'How long does the application approval process take?',
+          a: 'Applications are typically reviewed and approved within 24 hours. In some cases, the process may take a bit longer if additional review is required. We will notify you as soon as the review is complete, the process vary depending on specific program.'
+        }
+      ],
+      contactKicker: 'Contact',
+      contactTitle: 'Ready to Start Earning With Melbet?',
+      contactCopy1:
+        'Join our network of successful partners today and start building your revenue stream with one of the industry\'s most rewarding partnership programs.',
+      contactCopy2:
+        'Ready to apply? Open the partner application form on a dedicated page and submit your details in minutes.',
+      contactLinks: ['Telegram', 'WhatsApp'],
+      contactButton: 'Apply Now'
+    },
+    contact: {
+      title: 'MelBet Partnerships | Contact Form',
+      description: 'Apply to become a MelBet partner using the official contact form.',
+      topCta: 'Fill The Form',
+      heroKicker: 'Contact',
+      heroTitle: 'Become a MelBet Partner',
+      heroCopy:
+        'Fill out the application form below. Our team will review your request and contact you within 24 hours.',
+      labels: {
+        firstName: 'First Name *',
+        lastName: 'Last Name *',
+        email: 'Email Address *',
+        phone: 'Phone Number *',
+        country: 'Country *',
+        program: 'Partnership Program *',
+        traffic: 'Traffic Source / Experience',
+        message: 'Message *'
+      },
+      placeholders: {
+        traffic: 'e.g. Facebook Ads, SEO, Telegram',
+        message: 'Tell us more about your goals and GEOs'
+      },
+      programOptions: [
+        'Select a program',
+        'Affiliate Partner Program',
+        'Teamcash program',
+        'E-payment Agent Program'
+      ],
+      consentMain:
+        'I agree to the <a href="https://melbet.com/en/information/rules/1" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a> and <a href="https://melbet.com/en/information/rules/privacy_policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> *',
+      consentOptional: 'I would like to receive updates about partnership opportunities and promotions.',
+      actions: ['Submit Application', 'Back to Main Page']
+    }
+  },
+  arab: {
+    dir: 'rtl',
+    common: {
+      logoAria: 'الصفحة الرئيسية MelBet',
+      toggleMenu: 'فتح القائمة',
+      navAria: 'التنقل الرئيسي',
+      nav: ['الرئيسية', 'البرامج', 'المزايا', 'الأسئلة', 'اتصل بنا']
+    },
+    index: {
+      title: 'برنامج شراكات Melbet',
+      description: 'انضم إلى برنامج شراكات Melbet وابدأ الربح عبر برامج الأفلييت ووكيل الدفع والدفع الإلكتروني.',
+      topCta: 'ابدأ الربح اليوم',
+      heroKicker: 'شراكة MelBet الرسمية',
+      heroTitle: 'انضم إلى برنامج شراكات Melbet',
+      heroCopy: 'كن جزءا من شبكتنا العالمية وابدأ الربح عبر برامج شراكة متكاملة مصممة للنجاح في منطقة الشرق الأوسط وخارجها.',
+      heroButtons: ['ابدأ الربح اليوم', 'برامج الشراكة'],
+      statsTitle: 'إحصائيات مهمة',
+      stats: [
+        'شريك نشط <strong class="stat-num">10 000+</strong>',
+        'عمولات مدفوعة <strong class="stat-num">$5M+</strong>',
+        'دولة مشمولة <strong class="stat-num">120+</strong>',
+        'دعم للشركاء <strong class="stat-num">24/7</strong>'
+      ],
+      programsKicker: 'البرامج',
+      programsTitle: 'برامج الشراكة لدينا',
+      programsCopy: 'اختر البرنامج المناسب لمهاراتك وابدأ تحقيق الإيرادات مع واحدة من المنصات الرائدة في المجال.',
+      programs: [
+        {
+          title: 'برنامج الشريك الأفلييت',
+          copy: 'ضاعف أرباحك عبر نموذج عوائد متعدد المستويات يكافئ الأداء والنمو.',
+          items: [
+            'عمولة من 25% إلى 50% من إيراد اللاعبين عبر كودك',
+            'إمكانية رفع نسبة العمولة حسب الأداء',
+            'فرصة أن تصبح حساب Master مع عمولة إضافية 3%',
+            'حسابات تجريبية للتسويق بقيمة 2000 إلى 10000 دولار',
+            'برنامج CPA: مكافأة مباشرة 10$ لكل لاعب مؤهل'
+          ],
+          cta: 'انضم لبرنامج الأفلييت'
+        },
+        {
+          title: 'برنامج Teamcash',
+          copy: 'كن مزود حلول مالية في بلدك واحصل على عمولات من المعاملات النقدية.',
+          items: [
+            'تقديم خدمات الإيداع والسحب للاعبين في منطقتك',
+            'العمل مباشرة عبر تطبيق الشركة',
+            'استثمار ابتدائي منخفض: 50 دولار',
+            'العمر 18 سنة فما فوق',
+            'كن الحل المحلي الموثوق لعمليات الدفع'
+          ],
+          cta: 'انضم لبرنامج Teamcash'
+        },
+        {
+          title: 'برنامج وكيل الدفع الإلكتروني',
+          copy: 'استخدم حلول الدفع الرقمية لخدمة اللاعبين والحصول على عمولات تنافسية.',
+          items: [
+            'معالجة المدفوعات والتحويلات الرقمية للاعبين',
+            'العمل مع منصات ووسائل دفع إلكترونية متعددة',
+            'هيكل عمولات تنافسي على كل المعاملات',
+            'دعم تقني مخصص عند الحاجة',
+            'تقارير ولوحة تحليلات فورية'
+          ],
+          cta: 'انضم لبرنامج الدفع الإلكتروني'
+        }
+      ],
+      benefitsKicker: 'المزايا',
+      benefitsTitle: 'لماذا الشراكة معنا؟',
+      benefitsCopy: 'نوفر كل ما تحتاجه للنجاح في رحلة الشراكة.',
+      benefits: [
+        { title: 'نموذج أرباح مثبت', copy: 'برامجنا مصممة لنجاحك وتقدم مصادر دخل متعددة.' },
+        { title: 'دعم مخصص', copy: 'فريق دعم الشركاء يساعدك على تعظيم أرباحك.' },
+        { title: 'أدوات تسويق', copy: 'مواد وأدوات تسويقية جاهزة للترويج للمنصة.' },
+        { title: 'انتشار عالمي', copy: 'استفد من قاعدة مستخدمين دولية ووسع أعمالك.' }
+      ],
+      faqKicker: 'الأسئلة الشائعة',
+      faqTitle: 'الأسئلة الأكثر شيوعا',
+      faqCopy: 'لديك سؤال؟ ربما لدينا الإجابة هنا.',
+      faq: [
+        { q: 'ما هي Melbet؟', a: 'منصة عالمية تعمل منذ أكثر من 12 عاما وتقدم خدمات ترفيه ومراهنات إلكترونية متكاملة في عشرات الدول.' },
+        { q: 'ما شرط العمر للانضمام؟', a: 'يجب أن يكون عمرك 18 سنة على الأقل. وقد تختلف الشروط الإضافية حسب البلد والبرنامج.' },
+        { q: 'كيف يعمل برنامج الأفلييت؟', a: 'تحصل على عمولة من 25% إلى 50% من إيراد اللاعبين الذين يسجلون عبر كودك، مع إمكانية عمولة إضافية للحسابات الرئيسية.' },
+        { q: 'ما هو Teamcash؟', a: 'يشير إلى خدمة دفع تتيح للوكلاء المعتمدين تنفيذ الإيداع والسحب للاعبين في حساباتهم.' },
+        { q: 'ما هو برنامج الدفع الإلكتروني؟', a: 'تعمل كوكلاء دفع رقمي في بلدك لتنفيذ الإيداعات والسحوبات عبر بنوك ووسائل محلية مع توفر الخدمة للاعبين على مدار الساعة.' },
+        { q: 'ما هو برنامج Teamcash؟', a: 'برنامج يتيح لك تقديم حلول الدفع النقدي في منطقتك والحصول على عمولة عن كل معاملة.' },
+        { q: 'ما هو برنامج CPA؟', a: 'مكافأة مباشرة 10 دولارات لكل لاعب مؤهل، بالإضافة إلى نظام العمولات الأساسي.' },
+        { q: 'هل توفرون حسابات تجريبية للتسويق؟', a: 'نعم، نوفر حسابات تجريبية بين 2000 و10000 دولار لأغراض العرض والتسويق.' },
+        { q: 'ما تكلفة البدء كوكيل Teamcash؟', a: 'التكلفة المبدئية 50 دولار فقط، وقد تختلف قليلا حسب البلد.' },
+        { q: 'كيف أعمل كوكيل Teamcash؟', a: 'تستخدم التطبيق المخصص لمعالجة طلبات الإيداع والسحب للاعبين في منطقتك مع عمولة محددة لكل عملية.' },
+        { q: 'ما الفرق بين Teamcash ووكيل الدفع الإلكتروني؟', a: 'وكيل Teamcash يركز على المعاملات النقدية والوسائل المحلية، بينما وكيل الدفع الإلكتروني يركز على التحويلات الرقمية.' },
+        { q: 'مع أي بنوك دفع إلكتروني يمكنني العمل؟', a: 'مع محافظ إلكترونية وتحويلات بنكية وبطاقات دفع مسبقة حسب الخيارات المتاحة في بلدك.' },
+        { q: 'متى وكيف أستلم العمولات؟', a: 'العمولات تدفع وفق جدول متفق عليه. غالبا أسبوعيا للأفلييت والدفع الإلكتروني، وشهريا لبعض وكلاء الدفع.' },
+        { q: 'ما طرق السحب المتاحة؟', a: 'تحويلات بنكية ومحافظ إلكترونية وطرق محلية مختلفة حسب الدولة.' },
+        { q: 'كيف أتواصل مع فريق الشراكات؟', a: 'يمكنك التواصل عبر البريد الإلكتروني أو تيليجرام أو وسائل الاتصال في قسم التواصل.' },
+        { q: 'كم تستغرق الموافقة على الطلب؟', a: 'عادة خلال 24 ساعة، وقد تمتد قليلا إذا احتاج الطلب لمراجعة إضافية.' }
+      ],
+      contactKicker: 'اتصل بنا',
+      contactTitle: 'جاهز لبدء الربح مع Melbet؟',
+      contactCopy1: 'انضم اليوم إلى شبكة شركائنا الناجحين وابدأ بناء دخل ثابت.',
+      contactCopy2: 'افتح نموذج التقديم وارسله خلال دقائق.',
+      contactLinks: ['تيليجرام', 'واتساب'],
+      contactButton: 'قدّم الآن'
+    },
+    contact: {
+      title: 'MelBet Partnerships | نموذج التواصل',
+      description: 'قدّم لتصبح شريك MelBet عبر نموذج التواصل الرسمي.',
+      topCta: 'املأ النموذج',
+      heroKicker: 'التواصل',
+      heroTitle: 'كن شريكا مع MelBet',
+      heroCopy: 'املأ النموذج أدناه، وسيقوم فريقنا بمراجعة طلبك والتواصل معك خلال 24 ساعة.',
+      labels: {
+        firstName: 'الاسم الأول *',
+        lastName: 'اسم العائلة *',
+        email: 'البريد الإلكتروني *',
+        phone: 'رقم الهاتف *',
+        country: 'الدولة *',
+        program: 'برنامج الشراكة *',
+        traffic: 'مصدر الترافيك / الخبرة',
+        message: 'الرسالة *'
+      },
+      placeholders: {
+        traffic: 'مثال: إعلانات فيسبوك، SEO، تيليجرام',
+        message: 'أخبرنا أكثر عن أهدافك والدول المستهدفة'
+      },
+      programOptions: ['اختر البرنامج', 'برنامج الشريك الأفلييت', 'برنامج Teamcash', 'برنامج وكيل الدفع الإلكتروني'],
+      consentMain:
+        'أوافق على <a href="https://melbet.com/en/information/rules/1" target="_blank" rel="noopener noreferrer">الشروط والأحكام</a> و <a href="https://melbet.com/en/information/rules/privacy_policy" target="_blank" rel="noopener noreferrer">سياسة الخصوصية</a> *',
+      consentOptional: 'أرغب في استلام تحديثات حول فرص الشراكة والعروض.',
+      actions: ['إرسال الطلب', 'العودة للصفحة الرئيسية']
+    }
+  },
+  franch: {
+    dir: 'ltr',
+    common: {
+      logoAria: 'Accueil MelBet',
+      toggleMenu: 'Ouvrir le menu',
+      navAria: 'Navigation principale',
+      nav: ['Accueil', 'Programmes', 'Avantages', 'FAQ', 'Contact']
+    },
+    index: {
+      title: 'Programme de Partenariat Melbet',
+      description: 'Rejoignez le programme de partenariat Melbet et commencez a gagner avec les programmes Affiliate, Agent de paiement et E-paiement.',
+      topCta: 'Commencer a gagner',
+      heroKicker: 'Partenariat officiel MelBet',
+      heroTitle: 'Rejoignez le programme de partenariat Melbet',
+      heroCopy: 'Faites partie de notre reseau mondial et commencez a gagner avec des programmes de partenariat performants.',
+      heroButtons: ['Commencer a gagner', 'Nos programmes'],
+      statsTitle: 'Chiffres clefs',
+      stats: [
+        '<strong>10 000+</strong> Partenaires actifs',
+        '<strong>$5M+</strong> Commissions payees',
+        '<strong>120+</strong> Pays couverts',
+        '<strong>24/7</strong> Support partenaires'
+      ],
+      programsKicker: 'Programmes',
+      programsTitle: 'Nos programmes de partenariat',
+      programsCopy: 'Choisissez le programme adapte a vos competences et commencez a generer des revenus.',
+      programs: [
+        {
+          title: 'Programme Affiliate',
+          copy: 'Maximisez vos gains avec un modele de revenus evolutif.',
+          items: [
+            'Commission de 25% a 50% sur les revenus joueurs via votre code',
+            'Hausse possible du taux selon la performance',
+            'Possibilite de compte Master avec +3% supplementaires',
+            'Comptes demo marketing disponibles (2 000$ a 10 000$)',
+            'Programme CPA: bonus direct de 10$ par joueur qualifie'
+          ],
+          cta: 'Rejoindre Affiliate'
+        },
+        {
+          title: 'Programme Teamcash',
+          copy: 'Devenez fournisseur de solutions financieres et gagnez sur les transactions cash.',
+          items: [
+            'Depots et retraits pour les joueurs de votre region',
+            'Travail direct via l\'application entreprise',
+            'Investissement de depart faible: 50 USD',
+            'Age minimum: 18 ans',
+            'Solution locale de paiement de confiance'
+          ],
+          cta: 'Rejoindre Teamcash'
+        },
+        {
+          title: 'Programme Agent E-paiement',
+          copy: 'Utilisez les solutions de paiement digital et recevez des commissions competitives.',
+          items: [
+            'Traitement des paiements et transferts digitaux',
+            'Travail avec plusieurs plateformes de paiement',
+            'Commissions competitives sur les transactions',
+            'Support technique dedie',
+            'Tableau de bord et reporting en temps reel'
+          ],
+          cta: 'Rejoindre E-paiement'
+        }
+      ],
+      benefitsKicker: 'Avantages',
+      benefitsTitle: 'Pourquoi nous choisir?',
+      benefitsCopy: 'Tout ce dont vous avez besoin pour reussir votre partenariat.',
+      benefits: [
+        { title: 'Modele rentable', copy: 'Un systeme pense pour votre croissance avec plusieurs sources de revenus.' },
+        { title: 'Support dedie', copy: 'Une equipe dediee pour vous aider a augmenter vos resultats.' },
+        { title: 'Outils marketing', copy: 'Des ressources marketing completes pour promouvoir la plateforme.' },
+        { title: 'Portee globale', copy: 'Accedez a une audience internationale et developpez votre activite.' }
+      ],
+      faqKicker: 'FAQ',
+      faqTitle: 'Questions frequentes',
+      faqCopy: 'Consultez les reponses aux questions les plus frequentes.',
+      faq: [
+        { q: 'Qu\'est-ce que Melbet?', a: 'Une plateforme mondiale active depuis plus de 12 ans, proposant paris sportifs, eSports et casino en ligne.' },
+        { q: 'Quel age faut-il avoir?', a: 'Vous devez avoir 18 ans minimum. Certaines exigences peuvent varier selon le pays et le programme.' },
+        { q: 'Comment fonctionne le programme Affiliate?', a: 'Vous gagnez entre 25% et 50% des revenus des joueurs inscrits via votre code promo, avec options d\'evolution.' },
+        { q: 'Qu\'est-ce que Teamcash?', a: 'Un service de paiement mobile permettant aux agents officiels de gerer depots et retraits des joueurs.' },
+        { q: 'Qu\'est-ce que le programme E-Paiement?', a: 'Vous agissez comme agent de paiement digital dans votre pays pour les depots et retraits via banques locales.' },
+        { q: 'Qu\'est-ce que le programme Teamcash?', a: 'Vous devenez fournisseur local de solutions de paiement et gagnez une commission sur chaque transaction.' },
+        { q: 'Qu\'est-ce que le programme CPA?', a: 'Bonus direct de 10$ pour chaque joueur qualifie, en plus des commissions habituelles.' },
+        { q: 'Proposez-vous des comptes demo?', a: 'Oui, des comptes demo de 2 000$ a 10 000$ sont disponibles pour le marketing.' },
+        { q: 'Quel est le cout de depart Teamcash?', a: 'Le cout initial est de 50 USD, variable selon les pays.' },
+        { q: 'Comment travailler comme agent Teamcash?', a: 'Via l\'application dediee Melbet pour traiter les demandes locales de depots et retraits.' },
+        { q: 'Difference Teamcash vs E-Paiement?', a: 'Teamcash couvre surtout le cash et methodes locales; E-Paiement couvre les transferts numeriques.' },
+        { q: 'Quelles banques e-paiement sont supportees?', a: 'E-wallets, virements bancaires et cartes prepayees selon votre region.' },
+        { q: 'Quand recois-je les commissions?', a: 'Paiements reguliers selon planning convenu, avec suivi dans le tableau de bord.' },
+        { q: 'Quels sont les moyens de retrait?', a: 'Virements bancaires, e-wallets et autres options locales selon le pays.' },
+        { q: 'Comment contacter l\'equipe partenariats?', a: 'Par email, Telegram ou via la section Contact.' },
+        { q: 'Delai d\'approbation?', a: 'En general sous 24h, parfois plus selon la verification.' }
+      ],
+      contactKicker: 'Contact',
+      contactTitle: 'Pret a gagner avec Melbet?',
+      contactCopy1: 'Rejoignez notre reseau de partenaires performants et developpez vos revenus.',
+      contactCopy2: 'Remplissez le formulaire en quelques minutes.',
+      contactLinks: ['Telegram', 'WhatsApp'],
+      contactButton: 'Postuler maintenant'
+    },
+    contact: {
+      title: 'MelBet Partnerships | Formulaire de contact',
+      description: 'Postulez pour devenir partenaire MelBet via le formulaire officiel.',
+      topCta: 'Remplir le formulaire',
+      heroKicker: 'Contact',
+      heroTitle: 'Devenez partenaire MelBet',
+      heroCopy: 'Remplissez le formulaire ci-dessous. Notre equipe vous repond sous 24 heures.',
+      labels: {
+        firstName: 'Prenom *',
+        lastName: 'Nom *',
+        email: 'Adresse e-mail *',
+        phone: 'Numero de telephone *',
+        country: 'Pays *',
+        program: 'Programme de partenariat *',
+        traffic: 'Source de trafic / Experience',
+        message: 'Message *'
+      },
+      placeholders: {
+        traffic: 'ex: Facebook Ads, SEO, Telegram',
+        message: 'Parlez-nous de vos objectifs et GEOs'
+      },
+      programOptions: ['Choisir un programme', 'Programme Affiliate', 'Programme Teamcash', 'Programme Agent E-paiement'],
+      consentMain:
+        'J\'accepte les <a href="https://melbet.com/en/information/rules/1" target="_blank" rel="noopener noreferrer">Conditions generales</a> et la <a href="https://melbet.com/en/information/rules/privacy_policy" target="_blank" rel="noopener noreferrer">Politique de confidentialite</a> *',
+      consentOptional: 'Je souhaite recevoir des mises a jour sur les opportunites de partenariat et promotions.',
+      actions: ['Envoyer la demande', 'Retour a la page principale']
+    }
+  },
+  amharic: {
+    dir: 'ltr',
+    common: {
+      logoAria: 'MelBet ዋና ገጽ',
+      toggleMenu: 'ሜኑ ክፈት',
+      navAria: 'ዋና መመሪያ',
+      nav: ['መነሻ', 'ፕሮግራሞች', 'ጥቅሞች', 'ጥያቄዎች', 'ኮንታክት']
+    },
+    index: {
+      title: 'Melbet ፓርትነርሺፕ ፕሮግራም',
+      description: 'Melbet ፓርትነርሺፕ ፕሮግራም ተቀላቀሉ እና በAffiliate፣ Payment Agent እና E-payment ፕሮግራሞች ያግኙ።',
+      topCta: 'ዛሬ ገቢ ጀምር',
+      heroKicker: 'ኦፊሴላዊ MelBet አጋርነት',
+      heroTitle: 'Melbet ፓርትነርሺፕ ፕሮግራም ይቀላቀሉ',
+      heroCopy: 'የአለም አቀፍ ኔትወርክ ክፍል ይሁኑ እና በተሟላ የአጋርነት ፕሮግራሞች ገቢ ያስጀምሩ።',
+      heroButtons: ['ዛሬ ገቢ ጀምር', 'የእኛ ፕሮግራሞች'],
+      statsTitle: 'ዋና ቁጥሮች',
+      stats: [
+        '<strong>10 000+</strong> ንቁ አጋሮች',
+        '<strong>$5M+</strong> የተከፈለ ኮሚሽን',
+        '<strong>120+</strong> አገሮች',
+        '<strong>24/7</strong> የአጋር ድጋፍ'
+      ],
+      programsKicker: 'ፕሮግራሞች',
+      programsTitle: 'የእኛ የአጋርነት ፕሮግራሞች',
+      programsCopy: 'ከችሎታዎ ጋር የሚስማማ ፕሮግራም ይምረጡ እና ገቢ ጀምሩ።',
+      programs: [
+        {
+          title: 'Affiliate ፓርትነር ፕሮግራም',
+          copy: 'በአፈጻጸም ላይ የሚመሠረት የገቢ ሞዴል በመጠቀም ትርፍ ያድጉ።',
+          items: [
+            'በፕሮሞ ኮድዎ ከተመዘገቡ ተጫዋቾች 25%-50% ኮሚሽን',
+            'በአፈጻጸም መሠረት የኮሚሽን ጭማሪ',
+            'Master አካውንት ሆነው +3% ተጨማሪ ኮሚሽን',
+            'የማስታወቂያ ዴሞ አካውንቶች ($2,000-$10,000)',
+            'CPA: ለእያንዳንዱ ብቁ ተጫዋች $10 ቦነስ'
+          ],
+          cta: 'Affiliate ይቀላቀሉ'
+        },
+        {
+          title: 'Teamcash ፕሮግራም',
+          copy: 'በአገርዎ የፋይናንስ መፍትሄ አቅራቢ ሆነው ኮሚሽን ያግኙ።',
+          items: [
+            'ለተጫዋቾች የገንዘብ ግብይቶች ያቅርቡ',
+            'በኩባንያ መተግበሪያ ቀጥታ ይስሩ',
+            'ዝቅተኛ የመጀመሪያ ኢንቨስትመንት $50',
+            '18+ ዓመት መሆን አስፈላጊ',
+            'የአካባቢ እምነት ያለው የክፍያ መፍትሄ ይሁኑ'
+          ],
+          cta: 'Teamcash ፕሮግራም ተቀላቀል'
+        },
+        {
+          title: 'E-payment Agent ፕሮግራም',
+          copy: 'የዲጂታል ክፍያ መፍትሄዎች በመጠቀም ተወዳዳሪ ኮሚሽን ያግኙ።',
+          items: [
+            'ዲጂታል ክፍያ እና ማስተላለፊያ ያካሂዱ',
+            'በተለያዩ e-payment መድረኮች ይስሩ',
+            'በግብይት ሁሉ ተወዳዳሪ ኮሚሽን',
+            'ለቴክኒክ ጉዳዮች የተለየ ድጋፍ',
+            'በቅጽበት ሪፖርት እና አናሊቲክስ'
+          ],
+          cta: 'E-payment ይቀላቀሉ'
+        }
+      ],
+      benefitsKicker: 'ጥቅሞች',
+      benefitsTitle: 'ለምን ከእኛ ጋር?',
+      benefitsCopy: 'በአጋርነት ጉዞዎ ለስኬት የሚያስፈልጉ ሁሉንም እናቀርባለን።',
+      benefits: [
+        { title: 'የተረጋገጠ የገቢ ሞዴል', copy: 'ብዙ የገቢ ምንጮች ያሉት ፕሮግራም ለስኬትዎ የተዘጋጀ ነው።' },
+        { title: 'የተለየ ድጋፍ', copy: 'ገቢዎን ለማሳደግ የተለየ የአጋር ድጋፍ ቡድን ያግኙ።' },
+        { title: 'የማስታወቂያ መሳሪያዎች', copy: 'መድረካችንን ለማስተዋወቅ ብዙ እቃዎችን ያግኙ።' },
+        { title: 'ዓለም አቀፍ ድረስ', copy: 'ዓለም አቀፍ ተጠቃሚዎችን በመድረስ ንግድዎን ያስፋፉ።' }
+      ],
+      faqKicker: 'FAQ',
+      faqTitle: 'ተደጋጋሚ ጥያቄዎች',
+      faqCopy: 'ጥያቄ አለ? መልሱ እዚህ አለ።',
+      faq: [
+        { q: 'Melbet ምንድነው?', a: 'ከ12 ዓመት በላይ የሚሰራ ዓለም አቀፍ መድረክ ሲሆን የስፖርት፣ eSports እና ካሲኖ አገልግሎት ይሰጣል።' },
+        { q: 'የእድሜ መስፈርት ምንድነው?', a: 'ቢያንስ 18 አመት መሆን አስፈላጊ ነው፤ ሌሎች መስፈርቶች በአገር ሊለያዩ ይችላሉ።' },
+        { q: 'Affiliate ፕሮግራም እንዴት ይሰራል?', a: 'በእርስዎ ኮድ የተመዘገቡ ተጫዋቾች ከሚፈጥሩት ገቢ 25%-50% ኮሚሽን ያገኛሉ።' },
+        { q: 'Teamcash ምንድነው?', a: 'ወኪሎች ለተጫዋቾች ገንዘብ ማስገባት/ማውጣት የሚያስችል የሞባይል ክፍያ አገልግሎት ነው።' },
+        { q: 'E-Payment ፕሮግራም ምንድነው?', a: 'በአገርዎ የዲጂታል ክፍያ ወኪል ሆነው ኢንቨስት እና ማውጫ ግብይቶችን ያካሂዳሉ።' },
+        { q: 'Teamcash ፕሮግራም ምንድነው?', a: 'በአካባቢዎ የገንዘብ መፍትሄ አቅራቢ ሆነው በግብይት ኮሚሽን ያገኛሉ።' },
+        { q: 'CPA ፕሮግራም ምንድነው?', a: 'ለእያንዳንዱ ብቁ ተጫዋች የ$10 ቀጥታ ቦነስ ይሰጣል።' },
+        { q: 'የማስታወቂያ ዴሞ አካውንት አሉ?', a: 'አዎ፣ ከ$2,000 እስከ $10,000 ድረስ የዴሞ አካውንቶች አሉ።' },
+        { q: 'Teamcash ለመጀመር ወጪ ስንት ነው?', a: 'መጀመሪያ ወጪ $50 ብቻ ነው፤ በአገር መሰረት ሊለያይ ይችላል።' },
+        { q: 'እንዴት Teamcash agent እሰራ?', a: 'የMelbet መተግበሪያ በመጠቀም የአካባቢ ተጫዋቾች የገንዘብ ጥያቄዎችን ታካሂዳለህ።' },
+        { q: 'Teamcash እና E-Payment ልዩነት ምንድነው?', a: 'Teamcash በአብዛኛው ገንዘብ ክፍያ ላይ ይተኮራል፣ E-Payment ግን ዲጂታል ማስተላለፊያዎች ላይ።' },
+        { q: 'ከምን ዓይነት e-payment ባንኮች ጋር ልስራ?', a: 'e-wallets፣ bank transfer እና prepaid ካርዶች እንደ አካባቢዎ ይገኛሉ።' },
+        { q: 'ኮሚሽን መቼ እቀበላለሁ?', a: 'በተስማማ የክፍያ ሰሌዳ መሰረት በመደበኛነት ይከፈላል።' },
+        { q: 'የማውጫ መንገዶች ምን ናቸው?', a: 'bank transfer፣ e-wallet እና የአካባቢ አማራጮች በአገር መሠረት ይገኛሉ።' },
+        { q: 'ከፓርትነር ቡድን ጋር እንዴት እገናኛለሁ?', a: 'በኢሜይል፣ Telegram ወይም በContact ክፍል ያሉ መንገዶች መጠቀም ይችላሉ።' },
+        { q: 'ማመልከቻ ስንት ጊዜ ይወስዳል?', a: 'በአብዛኛው በ24 ሰዓት ውስጥ ይፈቀዳል፣ አንዳንድ ጊዜ ተጨማሪ ምርመራ ሊፈልግ ይችላል።' }
+      ],
+      contactKicker: 'ኮንታክት',
+      contactTitle: 'ከMelbet ጋር ገቢ ለመጀመር ዝግጁ ነህ?',
+      contactCopy1: 'ዛሬ ከተሳካ አጋሮቻችን ኔትወርክ ጋር ተቀላቀል።',
+      contactCopy2: 'በተለየ ገጽ ያለውን ቅጽ በደቂቃዎች ይሙሉ።',
+      contactLinks: ['Telegram', 'WhatsApp'],
+      contactButton: 'አሁን አመልክት'
+    },
+    contact: {
+      title: 'MelBet Partnerships | የኮንታክት ቅጽ',
+      description: 'ኦፊሴላዊ ቅጽ በመጠቀም የMelBet ፓርትነር ለመሆን ያመልክቱ።',
+      topCta: 'ቅጹን ሙላ',
+      heroKicker: 'ኮንታክት',
+      heroTitle: 'የMelBet ፓርትነር ሁን',
+      heroCopy: 'ከታች ያለውን ቅጽ ሙሉ፣ ቡድናችን በ24 ሰዓት ውስጥ ይገናኛል።',
+      labels: {
+        firstName: 'የመጀመሪያ ስም *',
+        lastName: 'የአባት ስም *',
+        email: 'ኢሜይል አድራሻ *',
+        phone: 'ስልክ ቁጥር *',
+        country: 'አገር *',
+        program: 'የፓርትነር ፕሮግራም *',
+        traffic: 'የትራፊክ ምንጭ / ልምድ',
+        message: 'መልእክት *'
+      },
+      placeholders: {
+        traffic: 'ምሳሌ: Facebook Ads, SEO, Telegram',
+        message: 'ስለ ግቦችዎ እና GEO ተጨማሪ ይንገሩን'
+      },
+      programOptions: ['ፕሮግራም ምረጥ', 'Affiliate ፓርትነር ፕሮግራም', 'Teamcash ፕሮግራም', 'E-payment Agent ፕሮግራም'],
+      consentMain:
+        '<a href="https://melbet.com/en/information/rules/1" target="_blank" rel="noopener noreferrer">የአገልግሎት ደንቦች</a> እና <a href="https://melbet.com/en/information/rules/privacy_policy" target="_blank" rel="noopener noreferrer">የግላዊነት ፖሊሲ</a> ተስማምቻለሁ *',
+      consentOptional: 'ስለ ፓርትነር እድሎች እና ፕሮሞሽኖች አዲስ መረጃ እፈልጋለሁ።',
+      actions: ['ማመልከቻ ላክ', 'ወደ ዋና ገጽ ተመለስ']
+    }
+  }
+};
+
+const isPlainObject = (value) =>
+  Boolean(value) && typeof value === 'object' && !Array.isArray(value);
+
+const mergeLocale = (base, override) => {
+  if (override === undefined) return base;
+  if (Array.isArray(override)) return override.slice();
+  if (!isPlainObject(override)) return override;
+
+  const result = isPlainObject(base) ? { ...base } : {};
+  Object.keys(override).forEach((key) => {
+    result[key] = mergeLocale(base ? base[key] : undefined, override[key]);
+  });
+  return result;
+};
+
+const registerLocale = (code, baseCode, override) => {
+  I18N[code] = mergeLocale(I18N[baseCode], override);
+};
+
+registerLocale('esp', 'eng', {
+  lang: 'es',
+  common: {
+    logoAria: 'Inicio MelBet',
+    toggleMenu: 'Abrir menu',
+    navAria: 'Navegacion principal',
+      nav: ['Inicio', 'Programas', 'Ventajas', 'Preguntas', 'Contacto']
+  },
+  index: {
+    title: 'Programa de Socios Melbet',
+    description:
+      'Unete al Programa de Socios Melbet y empieza a ganar con programas de Afiliados, Agente de Pago y E-payment.',
+    topCta: 'Empieza a ganar hoy',
+    heroKicker: 'Socio oficial de MelBet',
+    heroTitle: 'Unete al programa de socios de Melbet',
+    heroCopy:
+      'Forma parte de nuestra red global y comienza a generar ingresos con programas de colaboracion pensados para el mercado MENA y mas alla.',
+    heroButtons: ['Empieza a ganar hoy', 'Nuestros programas'],
+    statsTitle: 'Estadisticas clave',
+    stats: [
+      '<strong>10 000+</strong> Socios activos',
+      '<strong>$5M+</strong> Comisiones pagadas',
+      '<strong>120+</strong> Paises cubiertos',
+      '<strong>24/7</strong> Soporte para socios'
+    ],
+    programsKicker: 'Programas',
+    programsTitle: 'Nuestros programas de socios',
+    programsCopy:
+      'Elige el programa que mejor se adapte a tus habilidades y empieza a generar ingresos con una de las plataformas lideres del sector.',
+    programs: [
+      {
+        title: 'Programa de Socio Afiliado',
+        copy:
+          'Maximiza tus ingresos con nuestro modelo multinivel, creado para premiar el rendimiento y el crecimiento.',
+        items: [
+          'Comision del 25% al 50% sobre ingresos de jugadores registrados con tu codigo',
+          'Posibilidad de aumentar la comision segun el rendimiento',
+          'Opcion de convertirte en cuenta Master con 3% adicional',
+          'Cuentas demo para marketing disponibles ($2,000-$10,000)',
+          'Programa CPA: bono directo de $10 por cada jugador calificado'
+        ],
+        cta: 'Unirme al programa de Afiliados'
+      },
+      {
+        title: 'Programa Teamcash',
+        copy:
+          'Conviertete en proveedor de soluciones financieras en tu pais y gana comisiones por transacciones en efectivo.',
+        items: [
+          'Ofrece servicios de deposito y retiro a jugadores de tu region',
+          'Trabaja directamente con nuestra app corporativa',
+          'Inversion inicial baja: $50 USD',
+          'Debes tener 18 anos o mas',
+          'Se la solucion local de pago de confianza para la plataforma'
+        ],
+        cta: 'Unirme al programa Teamcash'
+      },
+      {
+        title: 'Programa de Agente E-payment',
+        copy:
+          'Aprovecha soluciones de pago digital para atender jugadores y ganar comisiones competitivas.',
+        items: [
+          'Procesa pagos y transferencias digitales para jugadores',
+          'Trabaja con diferentes plataformas y metodos e-payment',
+          'Estructura de comisiones competitiva en todas las transacciones',
+          'Acceso a soporte tecnico especializado',
+          'Panel de reportes y analitica en tiempo real'
+        ],
+        cta: 'Unirme al programa E-payment'
+      }
+    ],
+    benefitsKicker: 'Ventajas',
+    benefitsTitle: 'Por que trabajar con nosotros?',
+    benefitsCopy: 'Te damos todo lo necesario para triunfar en tu camino como socio.',
+    benefits: [
+      {
+        title: 'Modelo de ingresos probado',
+        copy: 'Nuestros programas de colaboracion ofrecen varias fuentes de ingresos para ayudarte a crecer.'
+      },
+      {
+        title: 'Soporte dedicado',
+        copy: 'Accede a nuestro equipo de soporte para socios y maximiza tus resultados.'
+      },
+      {
+        title: 'Herramientas de marketing',
+        copy: 'Dispondras de materiales y herramientas para promocionar la plataforma.'
+      },
+      {
+        title: 'Alcance global',
+        copy: 'Aprovecha nuestra base de usuarios internacional y expande tu negocio.'
+      }
+    ],
+    faqKicker: 'Preguntas',
+    faqTitle: 'Preguntas frecuentes',
+    faqCopy: 'Tienes una duda? Es posible que ya la hayamos respondido aqui.',
+    faq: [
+      {
+        q: 'Que es Melbet?',
+        a: 'Es una plataforma global en linea con mas de 12 anos de operacion que ofrece apuestas deportivas, eSports y casino en multiples paises.'
+      },
+      {
+        q: 'Cual es el requisito de edad para unirse?',
+        a: 'Debes tener al menos 18 anos para participar en cualquier programa de socios de MelBet.'
+      },
+      {
+        q: 'Como funciona el Programa de Afiliados?',
+        a: 'Ganas comisiones por traer nuevos jugadores a MelBet. La comision va del 25% al 50% segun el rendimiento y puedes optar por nivel Master.'
+      },
+      {
+        q: 'Que es Teamcash?',
+        a: 'Teamcash permite a agentes oficiales realizar depositos y retiros para jugadores en sus cuentas Melbet usando metodos locales.'
+      },
+      {
+        q: 'Que es el Programa E-Payment?',
+        a: 'Eres agente de pagos digitales en tu pais y gestionas depositos y retiros para jugadores mediante bancos y metodos disponibles localmente.'
+      },
+      {
+        q: 'Que es el Programa Teamcash?',
+        a: 'Te conviertes en proveedor financiero local y ganas comision por cada operacion de deposito o retiro que procesas.'
+      },
+      {
+        q: 'Que es el Programa CPA?',
+        a: 'Recibes un bono directo de $10 por cada jugador calificado, ademas de tus comisiones regulares.'
+      },
+      {
+        q: 'Ofrecen cuentas demo para marketing?',
+        a: 'Si, ofrecemos cuentas demo de $2,000 a $10,000 para presentaciones y acciones promocionales.'
+      },
+      {
+        q: 'Cual es el costo inicial para Teamcash?',
+        a: 'La inversion inicial suele ser de $50 USD, aunque puede variar segun el pais.'
+      },
+      {
+        q: 'Como trabajo como agente Teamcash?',
+        a: 'Usas la aplicacion dedicada de Melbet para procesar solicitudes de deposito y retiro de jugadores en tu zona.'
+      },
+      {
+        q: 'Que diferencia hay entre Teamcash y E-Payment Agent?',
+        a: 'Teamcash se centra mas en efectivo y metodos locales; E-Payment se enfoca en pagos digitales y transferencias electronicas.'
+      },
+      {
+        q: 'Con que bancos o metodos e-payment puedo trabajar?',
+        a: 'Con e-wallets, transferencias bancarias y tarjetas prepago, segun disponibilidad en tu region.'
+      },
+      {
+        q: 'Cuando y como recibo mis comisiones?',
+        a: 'Los pagos se realizan segun calendario acordado. Normalmente semanal para afiliados/e-payment y mensual para algunos agentes Teamcash.'
+      },
+      {
+        q: 'Que metodos de retiro estan disponibles?',
+        a: 'Hay transferencias bancarias, e-wallets y metodos locales. Las opciones dependen del pais.'
+      },
+      {
+        q: 'Como contacto al equipo de partnerships?',
+        a: 'Puedes escribir por email, Telegram o usar los contactos de la seccion Contacto.'
+      },
+      {
+        q: 'Cuanto tarda la aprobacion de la solicitud?',
+        a: 'Normalmente se aprueba en 24 horas, aunque en algunos casos puede tardar un poco mas.'
+      }
+    ],
+    contactKicker: 'Contacto',
+    contactTitle: 'Listo para empezar a ganar con Melbet?',
+    contactCopy1:
+      'Unete hoy a nuestra red de socios exitosos y empieza a construir un flujo de ingresos estable.',
+    contactCopy2:
+      'Listo para aplicar? Abre el formulario de socios en la pagina dedicada y envia tus datos en pocos minutos.',
+    contactLinks: ['Telegram', 'WhatsApp'],
+    contactButton: 'Aplicar ahora'
+  },
+  contact: {
+    title: 'MelBet Partnerships | Formulario de contacto',
+    description: 'Solicita ser socio de MelBet usando el formulario oficial.',
+    topCta: 'Rellenar formulario',
+    heroKicker: 'Contacto',
+    heroTitle: 'Hazte socio de MelBet',
+    heroCopy:
+      'Completa el formulario de solicitud. Nuestro equipo revisara tu caso y te respondera en un plazo de 24 horas.',
+    labels: {
+      firstName: 'Nombre *',
+      lastName: 'Apellido *',
+      email: 'Correo electronico *',
+      phone: 'Numero de telefono *',
+      country: 'Pais *',
+      program: 'Programa de socios *',
+      traffic: 'Fuente de trafico / experiencia',
+      message: 'Mensaje *'
+    },
+    placeholders: {
+      traffic: 'ej. Facebook Ads, SEO, Telegram',
+      message: 'Cuentanos mas sobre tus objetivos y GEOs'
+    },
+    programOptions: ['Selecciona un programa', 'Programa de Afiliados', 'Programa Teamcash', 'Programa de Agente de E-payment'],
+    consentMain:
+      'Acepto los <a href="https://melbet.com/en/information/rules/1" target="_blank" rel="noopener noreferrer">Terminos y condiciones</a> y la <a href="https://melbet.com/en/information/rules/privacy_policy" target="_blank" rel="noopener noreferrer">Politica de privacidad</a> *',
+    consentOptional: 'Quiero recibir novedades sobre oportunidades y promociones.',
+    actions: ['Enviar solicitud', 'Volver al inicio']
+  }
+});
+
+registerLocale('farsi', 'eng', {
+  lang: 'fa',
+  dir: 'rtl',
+  common: {
+    logoAria: 'صفحه اصلی MelBet',
+    toggleMenu: 'باز کردن منو',
+    navAria: 'ناوبری اصلی',
+    nav: ['خانه', 'برنامه ها', 'مزایا', 'سوالات', 'تماس']
+  },
+  index: {
+    title: 'برنامه همکاری Melbet',
+    description:
+      'به برنامه همکاری Melbet بپیوندید و با برنامه های Affiliate، Payment Agent و E-payment درآمد کسب کنید.',
+    topCta: 'امروز شروع به درآمد کنید',
+    heroKicker: 'همکاری رسمی MelBet',
+    heroTitle: 'به برنامه همکاری Melbet بپیوندید',
+    heroCopy:
+      'بخشی از شبکه جهانی ما شوید و با برنامه های همکاری کامل که برای رشد شما طراحی شده اند، درآمد خود را شروع کنید.',
+    heroButtons: ['امروز شروع به درآمد کنید', 'برنامه های همکاری ما'],
+    statsTitle: 'آمار کلیدی',
+    stats: [
+      '<strong class="stat-num">10 000+</strong> شریک فعال',
+      '<strong class="stat-num">$5M+</strong> کمیسیون پرداخت شده',
+      '<strong class="stat-num">120+</strong> کشور تحت پوشش',
+      '<strong class="stat-num">24/7</strong> پشتیبانی شرکا'
+    ],
+    programsKicker: 'برنامه ها',
+    programsTitle: 'برنامه های همکاری ما',
+    programsCopy:
+      'برنامه ای را انتخاب کنید که با مهارت های شما سازگار است و با یکی از پلتفرم های پیشرو درآمد کسب کنید.',
+    programs: [
+      {
+        title: 'برنامه شریک Affiliate',
+        copy: 'درآمد خود را با مدل چندسطحی ما که عملکرد و رشد را پاداش می دهد، افزایش دهید.',
+        items: [
+          'کمیسیون 25% تا 50% از درآمد بازیکنان با کد شما',
+          'امکان افزایش درصد کمیسیون بر اساس عملکرد',
+          'امکان تبدیل شدن به حساب Master با 3% کمیسیون اضافه',
+          'حساب دمو برای مارکتینگ ($2,000-$10,000)',
+          'برنامه CPA: بونوس مستقیم $10 برای هر بازیکن واجد شرایط'
+        ],
+        cta: 'پیوستن به برنامه Affiliate'
+      },
+      {
+        title: 'برنامه Teamcash',
+        copy: 'در کشور خود ارائه دهنده راهکار مالی شوید و از تراکنش های نقدی کمیسیون بگیرید.',
+        items: [
+          'ارائه خدمات واریز و برداشت برای بازیکنان منطقه شما',
+          'کار مستقیم با اپلیکیشن شرکت',
+          'سرمایه اولیه کم: $50',
+          'حداقل سن 18 سال',
+          'راهکار پرداخت محلی قابل اعتماد برای پلتفرم باشید'
+        ],
+        cta: 'پیوستن به برنامه Teamcash'
+      },
+      {
+        title: 'برنامه عامل E-payment',
+        copy: 'با استفاده از راهکارهای پرداخت دیجیتال به بازیکنان خدمت دهید و کمیسیون رقابتی دریافت کنید.',
+        items: [
+          'پردازش پرداخت ها و انتقال های دیجیتال برای بازیکنان',
+          'کار با پلتفرم ها و روش های مختلف e-payment',
+          'ساختار کمیسیون رقابتی برای همه تراکنش ها',
+          'دسترسی به تیم پشتیبانی فنی اختصاصی',
+          'گزارش و تحلیل لحظه ای'
+        ],
+        cta: 'پیوستن به برنامه E-payment'
+      }
+    ],
+    benefitsKicker: 'مزایا',
+    benefitsTitle: 'چرا با ما همکاری کنید؟',
+    benefitsCopy: 'هر چیزی که برای موفقیت در مسیر همکاری نیاز دارید را فراهم می کنیم.',
+    benefits: [
+      { title: 'مدل درآمد اثبات شده', copy: 'برنامه های ما با چندین مسیر درآمدی برای رشد شما طراحی شده اند.' },
+      { title: 'پشتیبانی اختصاصی', copy: 'به تیم پشتیبانی شرکا دسترسی دارید تا درآمد خود را بهتر کنید.' },
+      { title: 'ابزارهای بازاریابی', copy: 'به ابزارها و مواد بازاریابی متنوع برای پروموت دسترسی خواهید داشت.' },
+      { title: 'پوشش جهانی', copy: 'از پایگاه کاربری بین المللی ما برای توسعه کسب و کار استفاده کنید.' }
+    ],
+    faqKicker: 'FAQ',
+    faqTitle: 'سوالات متداول',
+    faqCopy: 'سوالی دارید؟ احتمالاً پاسخ آن را قبلاً اینجا داده ایم.',
+    faq: [
+      { q: 'Melbet چیست؟', a: 'Melbet یک پلتفرم جهانی با بیش از 12 سال سابقه در خدمات شرط بندی ورزشی، eSports و کازینو است.' },
+      { q: 'شرط سنی برای همکاری چیست؟', a: 'برای ورود به برنامه های همکاری MelBet باید حداقل 18 سال داشته باشید.' },
+      { q: 'برنامه Affiliate چگونه کار می کند؟', a: 'شما بازیکن جدید جذب می کنید و از درآمد آن ها بین 25% تا 50% کمیسیون می گیرید.' },
+      { q: 'Teamcash چیست؟', a: 'Teamcash مدلی است که در آن عاملان رسمی عملیات واریز و برداشت بازیکنان را انجام می دهند.' },
+      { q: 'برنامه E-Payment چیست؟', a: 'در این برنامه به عنوان عامل پرداخت دیجیتال در کشور خود فعالیت می کنید.' },
+      { q: 'برنامه Teamcash چه مزیتی دارد؟', a: 'به عنوان راهکار مالی محلی فعالیت می کنید و برای هر تراکنش کمیسیون دریافت می کنید.' },
+      { q: 'برنامه CPA چیست؟', a: 'برای هر بازیکن واجد شرایط، $10 بونوس مستقیم علاوه بر کمیسیون معمول دریافت می کنید.' },
+      { q: 'آیا حساب دمو ارائه می دهید؟', a: 'بله، حساب های دمو از $2,000 تا $10,000 برای اهداف بازاریابی ارائه می شود.' },
+      { q: 'هزینه شروع Teamcash چقدر است؟', a: 'هزینه اولیه معمولاً $50 است و ممکن است بسته به کشور متفاوت باشد.' },
+      { q: 'چطور به عنوان عامل Teamcash کار کنم؟', a: 'با اپلیکیشن Melbet درخواست های واریز/برداشت بازیکنان منطقه خود را مدیریت می کنید.' },
+      { q: 'فرق Teamcash با E-Payment چیست؟', a: 'Teamcash بیشتر بر روش های نقدی/محلی تمرکز دارد و E-Payment روی پرداخت دیجیتال.' },
+      { q: 'با چه بانک ها یا روش هایی می توان کار کرد؟', a: 'با e-wallet، حواله بانکی و کارت های پیش پرداخت بر اساس کشور شما.' },
+      { q: 'کمیسیون ها چه زمانی پرداخت می شود؟', a: 'پرداخت ها طبق برنامه توافقی انجام می شود؛ معمولاً هفتگی یا ماهانه.' },
+      { q: 'روش های برداشت چیست؟', a: 'حواله بانکی، کیف پول الکترونیک و روش های محلی بسته به کشور در دسترس است.' },
+      { q: 'چطور با تیم همکاری تماس بگیرم؟', a: 'از طریق ایمیل، Telegram یا بخش Contact سایت.' },
+      { q: 'تایید درخواست چقدر طول می کشد؟', a: 'معمولاً ظرف 24 ساعت انجام می شود؛ گاهی کمی بیشتر.' }
+    ],
+    contactKicker: 'تماس',
+    contactTitle: 'برای شروع درآمد با Melbet آماده اید؟',
+    contactCopy1: 'همین امروز به شبکه شرکای موفق ما بپیوندید و جریان درآمدی خود را بسازید.',
+    contactCopy2: 'برای ثبت نام، فرم همکاری را در صفحه اختصاصی باز کنید و در چند دقیقه ارسال کنید.',
+    contactLinks: ['تلگرام', 'واتساپ'],
+    contactButton: 'همین حالا درخواست بده'
+  },
+  contact: {
+    title: 'MelBet Partnerships | فرم تماس',
+    description: 'برای تبدیل شدن به شریک MelBet فرم رسمی را ارسال کنید.',
+    topCta: 'فرم را پر کنید',
+    heroKicker: 'تماس',
+    heroTitle: 'شریک MelBet شوید',
+    heroCopy: 'فرم زیر را کامل کنید. تیم ما درخواست شما را بررسی کرده و طی 24 ساعت پاسخ می دهد.',
+    labels: {
+      firstName: 'نام *',
+      lastName: 'نام خانوادگی *',
+      email: 'ایمیل *',
+      phone: 'شماره تلفن *',
+      country: 'کشور *',
+      program: 'برنامه همکاری *',
+      traffic: 'منبع ترافیک / تجربه',
+      message: 'پیام *'
+    },
+    placeholders: {
+      traffic: 'مثال: Facebook Ads, SEO, Telegram',
+      message: 'درباره اهداف و GEO های خود بیشتر بگویید'
+    },
+    programOptions: ['یک برنامه انتخاب کنید', 'برنامه Affiliate', 'برنامه Teamcash', 'برنامه عامل E-payment'],
+    consentMain:
+      'من <a href="https://melbet.com/en/information/rules/1" target="_blank" rel="noopener noreferrer">شرایط و ضوابط</a> و <a href="https://melbet.com/en/information/rules/privacy_policy" target="_blank" rel="noopener noreferrer">سیاست حریم خصوصی</a> را می پذیرم *',
+    consentOptional: 'مایلم آپدیت های فرصت های همکاری و پروموشن ها را دریافت کنم.',
+    actions: ['ارسال درخواست', 'بازگشت به صفحه اصلی']
+  }
+});
+
+registerLocale('mongol', 'eng', {
+  lang: 'mn',
+  common: {
+    logoAria: 'MelBet нүүр хуудас',
+    toggleMenu: 'Цэс нээх',
+    navAria: 'Үндсэн навигац',
+      nav: ['Нүүр', 'Хөтөлбөр', 'Давуу тал', 'Асуулт', 'Холбоо барих']
+  },
+  index: {
+    title: 'Melbet түншлэлийн хөтөлбөр',
+    description:
+      'Melbet түншлэлийн хөтөлбөрт нэгдэж Affiliate, Payment Agent, E-payment хөтөлбөрөөр орлого олоорой.',
+    topCta: 'Өнөөдөр орлогоо эхэл',
+    heroKicker: 'MelBet албан ёсны түншлэл',
+    heroTitle: 'Melbet түншлэлийн хөтөлбөрт нэгдээрэй',
+    heroCopy:
+      'Манай дэлхийн сүлжээний нэг хэсэг болж, таны өсөлтөд зориулсан түншлэлийн хөтөлбөрөөр орлогоо нэмэгдүүлээрэй.',
+    heroButtons: ['Өнөөдөр орлогоо эхэл', 'Манай түншлэлийн хөтөлбөрүүд'],
+    statsTitle: 'Гол үзүүлэлт',
+    stats: [
+      '<strong>10 000+</strong> Идэвхтэй түнш',
+      '<strong>$5M+</strong> Төлсөн шимтгэл',
+      '<strong>120+</strong> Улс',
+      '<strong>24/7</strong> Түншийн дэмжлэг'
+    ],
+    programsKicker: 'Хөтөлбөр',
+    programsTitle: 'Манай түншлэлийн хөтөлбөрүүд',
+    programsCopy: 'Өөрт тохирох хөтөлбөрөө сонгоод тэргүүлэгч платформтой хамт орлогоо эхлүүл.',
+    programs: [
+      {
+        title: 'Affiliate түнш хөтөлбөр',
+        copy: 'Гүйцэтгэл, өсөлтийг шагнах олон түвшний орлогын загвараар орлогоо өсгөнө.',
+        items: [
+          'Таны кодоор бүртгүүлсэн тоглогчдоос 25%-50% шимтгэл',
+          'Үр дүнгээс хамааран шимтгэл нэмэгдэх боломж',
+          'Master account болж +3% нэмэлт шимтгэл авах боломж',
+          'Маркетингийн demo account ($2,000-$10,000)',
+          'CPA: шаардлага хангасан тоглогч бүрт $10 бонус'
+        ],
+        cta: 'Affiliate хөтөлбөрт нэгдэх'
+      },
+      {
+        title: 'Teamcash хөтөлбөр',
+        copy: 'Өөрийн улсад санхүүгийн үйлчилгээ үзүүлэгч болж бэлэн мөнгөний гүйлгээнээс шимтгэл ав.',
+        items: [
+          'Бүсийн тоглогчдод deposit/withdraw үйлчилгээ үзүүлэх',
+          'Компанийн апптай шууд ажиллах',
+          'Эхлэх хөрөнгө бага: $50',
+          '18+ нас шаардлагатай',
+          'Орон нутгийн найдвартай төлбөрийн шийдэл болох'
+        ],
+        cta: 'Teamcash хөтөлбөрт нэгдэх'
+      },
+      {
+        title: 'E-payment агент хөтөлбөр',
+        copy: 'Дижитал төлбөрийн шийдлээр тоглогчдод үйлчилгээ үзүүлж өрсөлдөхүйц шимтгэл ав.',
+        items: [
+          'Дижитал төлбөр, шилжүүлэг боловсруулах',
+          'Олон e-payment платформ, аргаар ажиллах',
+          'Бүх гүйлгээнд өрсөлдөхүйц шимтгэлийн бүтэц',
+          'Тусгай техникийн дэмжлэг',
+          'Бодит цагийн тайлан, аналитик'
+        ],
+        cta: 'E-payment хөтөлбөрт нэгдэх'
+      }
+    ],
+    benefitsKicker: 'Давуу тал',
+    benefitsTitle: 'Яагаад бидэнтэй хамтрах вэ?',
+    benefitsCopy: 'Түншлэлийн замналд тань хэрэгтэй бүхнийг бид өгнө.',
+    benefits: [
+      { title: 'Батлагдсан орлогын загвар', copy: 'Олон сувгаар тогтвортой орлого олох боломжтой.' },
+      { title: 'Тусгай дэмжлэг', copy: 'Манай түншийн баг таны үр дүнг нэмэгдүүлэхэд тусална.' },
+      { title: 'Маркетингийн хэрэгсэл', copy: 'Сурталчилгаанд хэрэгтэй материал, хэрэгсэл өгнө.' },
+      { title: 'Дэлхийн хүрээ', copy: 'Олон улсын хэрэглэгчдэд хүрч бизнесээ өргөжүүл.' }
+    ],
+    faqKicker: 'Асуулт',
+    faqTitle: 'Түгээмэл асуултууд',
+    faqCopy: 'Асуулт байна уу? Хариулт нь энд байж магадгүй.',
+    faq: [
+      { q: 'Melbet гэж юу вэ?', a: 'Melbet бол спорт, eSports, казино үйлчилгээтэй дэлхийн онлайн платформ юм.' },
+      { q: 'Насны шаардлага юу вэ?', a: 'MelBet түншлэлийн хөтөлбөрт оролцохын тулд 18-аас дээш настай байна.' },
+      { q: 'Affiliate хөтөлбөр хэрхэн ажилладаг вэ?', a: 'Та шинэ тоглогч авчирч, тэдний орлогоос 25%-50% шимтгэл авна.' },
+      { q: 'Teamcash гэж юу вэ?', a: 'Албан ёсны агентууд тоглогчдын мөнгөний үйлчилгээг гүйцэтгэдэг загвар юм.' },
+      { q: 'E-Payment хөтөлбөр гэж юу вэ?', a: 'Та дижитал төлбөрийн агент болж deposit/withdraw үйлчилгээг үзүүлнэ.' },
+      { q: 'Teamcash хөтөлбөрийн мөн чанар?', a: 'Орон нутагт санхүүгийн үйлчилгээ үзүүлж гүйлгээ бүрээс шимтгэл авна.' },
+      { q: 'CPA хөтөлбөр гэж юу вэ?', a: 'Шаардлага хангасан тоглогч бүрт шууд $10 бонус авна.' },
+      { q: 'Demo account олгодог уу?', a: 'Тийм. Маркетингийн зорилгоор $2,000-$10,000 demo account өгдөг.' },
+      { q: 'Teamcash эхлэх өртөг хэд вэ?', a: 'Ихэвчлэн $50, улсын нөхцлөөс хамаарч өөр байж болно.' },
+      { q: 'Teamcash агент хэрхэн ажиллах вэ?', a: 'Melbet апп ашиглан тоглогчдын хүсэлтийг боловсруулна.' },
+      { q: 'Teamcash ба E-Payment ялгаа?', a: 'Teamcash нь бэлэн мөнгө/орон нутгийн арга, E-Payment нь дижитал төлбөрт төвлөрдөг.' },
+      { q: 'Ямар e-payment аргуудтай ажиллах вэ?', a: 'e-wallet, банк шилжүүлэг, prepaid карт зэргийг улсдаа ашиглана.' },
+      { q: 'Шимтгэлийг хэзээ авдаг вэ?', a: 'Тохиролцсон хуваарийн дагуу долоо хоног бүр эсвэл сар бүр төлөгдөнө.' },
+      { q: 'Ямар withdraw аргууд байдаг вэ?', a: 'Банк, e-wallet, орон нутгийн арга зэргийг улсаас хамааран ашиглана.' },
+      { q: 'Partnership багтай яаж холбогдох вэ?', a: 'Имэйл, Telegram эсвэл Contact хэсгээр холбогдоно.' },
+      { q: 'Заявкын баталгаажуулалт хэр удаан вэ?', a: 'Ихэвчлэн 24 цагт, зарим үед арай удаж болно.' }
+    ],
+    contactKicker: 'Холбоо барих',
+    contactTitle: 'Melbet-тэй орлого эхлүүлэхэд бэлэн үү?',
+    contactCopy1: 'Амжилттай түншүүдийн сүлжээнд нэгдэж тогтвортой орлогоо өнөөдрөөс эхлүүл.',
+    contactCopy2: 'Өргөдлийн хуудсыг нээгээд мэдээллээ хэдхэн минутын дотор илгээнэ үү.',
+    contactLinks: ['Telegram', 'WhatsApp'],
+    contactButton: 'Одоо хүсэлт гаргах'
+  },
+  contact: {
+    title: 'MelBet Partnerships | Холбоо барих маягт',
+    description: 'MelBet-ийн албан ёсны маягтаар түнш болох хүсэлт илгээнэ үү.',
+    topCta: 'Маягт бөглөх',
+    heroKicker: 'Холбоо барих',
+    heroTitle: 'MelBet түнш болоорой',
+    heroCopy: 'Доорх өргөдлийн маягтыг бөглөнө үү. Манай баг 24 цагийн дотор холбогдоно.',
+    labels: {
+      firstName: 'Нэр *',
+      lastName: 'Овог *',
+      email: 'Имэйл *',
+      phone: 'Утасны дугаар *',
+      country: 'Улс *',
+      program: 'Түншлэлийн хөтөлбөр *',
+      traffic: 'Траффикийн эх үүсвэр / туршлага',
+      message: 'Мессеж *'
+    },
+    placeholders: {
+      traffic: 'жишээ: Facebook Ads, SEO, Telegram',
+      message: 'Зорилго болон GEO-гийн талаар дэлгэрэнгүй бичнэ үү'
+    },
+    programOptions: ['Хөтөлбөр сонгох', 'Affiliate түнш хөтөлбөр', 'Teamcash хөтөлбөр', 'E-payment агент хөтөлбөр'],
+    consentMain:
+      'Би <a href="https://melbet.com/en/information/rules/1" target="_blank" rel="noopener noreferrer">Үйлчилгээний нөхцөл</a> болон <a href="https://melbet.com/en/information/rules/privacy_policy" target="_blank" rel="noopener noreferrer">Нууцлалын бодлого</a>-г зөвшөөрч байна *',
+    consentOptional: 'Түншлэлийн боломж, урамшууллын мэдээг хүлээн авахыг хүсэж байна.',
+    actions: ['Хүсэлт илгээх', 'Нүүр хуудас руу буцах']
+  }
+});
+
+registerLocale('somali', 'eng', {
+  lang: 'so',
+  common: {
+    logoAria: 'Bogga hore MelBet',
+    toggleMenu: 'Fur menu',
+    navAria: 'Hagaha weyn',
+    nav: ['Hore', 'Barnaamijyo', 'Faa iidooyin', 'Su aalo', 'La xiriir']
+  },
+  index: {
+    title: 'Barnaamijka Wada-hawlgalka Melbet',
+    description:
+      'Ku biir barnaamijka wada-hawlgalka Melbet oo ka kasbo Affiliate, Payment Agent iyo E-payment.',
+    topCta: 'Maanta bilow dakhli',
+    heroKicker: 'Wada-hawlgal rasmi ah MelBet',
+    heroTitle: 'Ku biir barnaamijka wada-hawlgalka Melbet',
+    heroCopy:
+      'Noqo qayb ka mid ah shabakadeena caalamiga ah oo bilow dakhli adigoo adeegsanaya barnaamijyo dhammaystiran.',
+    heroButtons: ['Maanta bilow dakhli', 'Barnaamijyadeena'],
+    statsTitle: 'Tirooyinka muhiimka ah',
+    stats: [
+      '<strong>10 000+</strong> Wada-hawlgalayaal firfircoon',
+      '<strong>$5M+</strong> Gunooyin la bixiyay',
+      '<strong>120+</strong> Dalal la daboolay',
+      '<strong>24/7</strong> Taageerada la-hawlgalayaasha'
+    ],
+    programsKicker: 'Barnaamijyo',
+    programsTitle: 'Barnaamijyada wada-hawlgalkeena',
+    programsCopy:
+      'Dooro barnaamijka kugu habboon oo bilow dakhli adigoo la shaqeynaya mid ka mid ah platform-yada hormuudka ah.',
+    programs: [
+      {
+        title: 'Barnaamijka Affiliate Partner',
+        copy: 'Kordhi dakhligaaga adigoo adeegsanaya qaab-dhismeed heerar badan leh.',
+        items: [
+          '25% ilaa 50% komishan dakhliga ciyaartoyga aad keento',
+          'Fursad komishan sare ku saleysan waxqabad',
+          'Fursad Master Account +3% komishan dheeri ah',
+          'Akoonno demo suuq-geyn ah ($2,000-$10,000)',
+          'CPA: $10 bonus toos ah ciyaaryahan kasta oo u qalma'
+        ],
+        cta: 'Ku biir Affiliate Program'
+      },
+      {
+        title: 'Barnaamijka Teamcash',
+        copy: 'Noqo adeeg bixiye maaliyadeed deegaankaaga oo ka kasbo macaamillo lacag caddaan ah.',
+        items: [
+          'Bixi adeegyo deebaaji iyo bixid ciyaartoyga gobolkaaga',
+          'Si toos ah ula shaqee app-ka shirkadda',
+          'Maalgelin bilow ah oo hooseysa: $50',
+          'Da’du waa inay tahay 18+',
+          'Noqo xal lacag-bixin maxalli ah oo lagu kalsoon yahay'
+        ],
+        cta: 'Ku biir Teamcash Program'
+      },
+      {
+        title: 'Barnaamijka E-payment Agent',
+        copy: 'Adeegso xalalka lacag-bixinta dijitaalka ah oo hel komishan tartan leh.',
+        items: [
+          'Habee lacag-bixinno iyo wareejinno dijitaal ah',
+          'La shaqee habab iyo platform-yo e-payment kala duwan',
+          'Qaab komishan tartan leh dhammaan macaamillada',
+          'Hel taageero farsamo oo gaar ah',
+          'Warbixin iyo analytics waqtiga-dhabta ah'
+        ],
+        cta: 'Ku biir E-payment Program'
+      }
+    ],
+    benefitsKicker: 'Faa iidooyin',
+    benefitsTitle: 'Maxaad noola shaqaynaysaa?',
+    benefitsCopy: 'Waxaan ku siinaa wax kasta oo aad u baahan tahay si aad ugu guulaysato wada-hawlgalka.',
+    benefits: [
+      { title: 'Qaab dakhli la xaqiijiyay', copy: 'Barnaamijyadeenu waxay bixiyaan ilo dakhli oo badan.' },
+      { title: 'Taageero gaar ah', copy: 'Kooxdayada taageerada ayaa kaa caawinaysa kobcinta dakhliga.' },
+      { title: 'Qalab suuq-geyn', copy: 'Waxaad heli doontaa agab iyo qalab suuq-geyn oo diyaarsan.' },
+      { title: 'Gaadhis caalami ah', copy: 'Ka faa iidayso isticmaaleyaasha caalamiga ah si aad u balaadhiso ganacsigaaga.' }
+    ],
+    faqKicker: 'Su aalo',
+    faqTitle: 'Su aalo badanaa la isweydiiyo',
+    faqCopy: 'Su aal ma qabtaa? Jawaabteeda waxaa laga yaabaa inay halkan ku jirto.',
+    faq: [
+      { q: 'Waa maxay Melbet?', a: 'Melbet waa platform caalami ah oo bixiya ciyaaro isboorti, eSports iyo casino.' },
+      { q: 'Shuruudda da’da maxay tahay?', a: 'Waa inaad ka weyn tahay 18 sano si aad uga qeyb gasho barnaamijyada MelBet.' },
+      { q: 'Affiliate Program sidee ayuu u shaqeeyaa?', a: 'Waxaad keentaa ciyaartoy cusub oo ka heshaa 25%-50% komishan.' },
+      { q: 'Waa maxay Teamcash?', a: 'Teamcash waa qaab ay agents-ku ku maamulaan deebaajiga iyo bixinta ciyaartoyda.' },
+      { q: 'Waa maxay E-Payment Program?', a: 'Waxaad noqoneysaa payment agent dijitaal ah dalkaaga.' },
+      { q: 'Waa maxay Teamcash Program?', a: 'Waxaad bixisaa adeegyo lacag-bixin oo maxalli ah oo komishan ka heshaa.' },
+      { q: 'Waa maxay CPA Program?', a: 'Waxaad helaysaa $10 bonus ciyaaryahan kasta oo u qalma.' },
+      { q: 'Ma bixisaan demo account?', a: 'Haa, waxaan bixinnaa demo account $2,000 ilaa $10,000.' },
+      { q: 'Kharashka bilowga Teamcash waa imisa?', a: 'Caadiyan waa $50, laakiin waddan kasta wuu kala duwanaan karaa.' },
+      { q: 'Sideen uga shaqeeyaa Teamcash agent?', a: 'Waxaad adeegsataa app-ka Melbet si aad u maamusho codsiyada ciyaartoyda.' },
+      { q: 'Farqiga Teamcash iyo E-Payment Agent?', a: 'Teamcash wuxuu diiradda saaraa cash/local methods; E-payment wuxuu saaraa digital.' },
+      { q: 'Bangiyo noocee ah ayaan la shaqayn karaa?', a: 'e-wallets, bank transfer iyo prepaid cards iyadoo ku xiran dalkaaga.' },
+      { q: 'Goorma ayaan helaa komishanka?', a: 'Lacag-bixinta waxay ku socotaa jadwal la isku raacay (todobaadle ama bille).' },
+      { q: 'Waa maxay hababka bixinta?', a: 'Bank transfer, e-wallets iyo habab maxalli ah.' },
+      { q: 'Sideen ula xiriiraa partnerships team?', a: 'Email, Telegram ama qaybta Contact ee website-ka.' },
+      { q: 'Muddo intee le eg ayuu qaataa ansixinta?', a: 'Badanaa 24 saac gudahood, mararka qaar wax yar ka badan.' }
+    ],
+    contactKicker: 'La xiriir',
+    contactTitle: 'Diyaar ma u tahay inaad Melbet kula bilowdo dakhli?',
+    contactCopy1: 'Ku biir shabakadeena wada-hawlgalayaasha guuleysta oo maanta bilow dhisidda dakhli joogto ah.',
+    contactCopy2: 'Diyaar ma tahay? Fur foomka codsiga oo ku dir xogtaada daqiiqado gudahood.',
+    contactLinks: ['Telegram', 'WhatsApp'],
+    contactButton: 'Hadda codso'
+  },
+  contact: {
+    title: 'MelBet Partnerships | Foomka xiriirka',
+    description: 'Ku codso inaad noqoto lammaane MelBet adigoo adeegsanaya foomka rasmiga ah.',
+    topCta: 'Buuxi foomka',
+    heroKicker: 'Xiriir',
+    heroTitle: 'Noqo lammaane MelBet',
+    heroCopy: 'Buuxi foomka hoose. Kooxdeenu waxay dib kuu soo laaban doontaa 24 saac gudahood.',
+    labels: {
+      firstName: 'Magaca hore *',
+      lastName: 'Magaca dambe *',
+      email: 'Email *',
+      phone: 'Lambarka telefoonka *',
+      country: 'Wadan *',
+      program: 'Barnaamijka wada-hawlgalka *',
+      traffic: 'Isha taraafikada / khibrad',
+      message: 'Fariin *'
+    },
+    placeholders: {
+      traffic: 'tusaale: Facebook Ads, SEO, Telegram',
+      message: 'Noo sheeg yoolalkaaga iyo GEO-yada'
+    },
+    programOptions: ['Dooro barnaamij', 'Affiliate Partner Program', 'Teamcash Program', 'E-payment Agent Program'],
+    consentMain:
+      'Waxaan oggolahay <a href="https://melbet.com/en/information/rules/1" target="_blank" rel="noopener noreferrer">Shuruudaha &amp; Xeerarka</a> iyo <a href="https://melbet.com/en/information/rules/privacy_policy" target="_blank" rel="noopener noreferrer">Siyaasadda Asturnaanta</a> *',
+    consentOptional: 'Waxaan rabaa inaan helo warar ku saabsan fursadaha wada-hawlgalka iyo xayaysiisyada.',
+    actions: ['Dir codsiga', 'Ku noqo bogga hore']
+  }
+});
+
+registerLocale('portug', 'eng', {
+  lang: 'pt',
+  common: {
+    logoAria: 'Inicio MelBet',
+    toggleMenu: 'Abrir menu',
+    navAria: 'Navegacao principal',
+    nav: ['Inicio', 'Programas', 'Vantagens', 'Perguntas', 'Contato']
+  },
+  index: {
+    title: 'Programa de Parcerias Melbet',
+    description:
+      'Junte-se ao programa de parcerias Melbet e comece a ganhar com Affiliate, Payment Agent e E-payment.',
+    topCta: 'Comece a ganhar hoje',
+    heroKicker: 'Parceria oficial MelBet',
+    heroTitle: 'Junte-se ao programa de parcerias Melbet',
+    heroCopy:
+      'Faca parte da nossa rede global e comece a gerar receita com programas completos de parceria.',
+    heroButtons: ['Comece a ganhar hoje', 'Nossos programas de parceria'],
+    statsTitle: 'Estatisticas-chave',
+    stats: [
+      '<strong>10 000+</strong> Parceiros ativos',
+      '<strong>$5M+</strong> Comissoes pagas',
+      '<strong>120+</strong> Paises cobertos',
+      '<strong>24/7</strong> Suporte para parceiros'
+    ],
+    programsKicker: 'Programas',
+    programsTitle: 'Nossos programas de parceria',
+    programsCopy:
+      'Escolha o programa ideal para suas habilidades e comece a faturar com uma das plataformas lideres.',
+    programs: [
+      {
+        title: 'Programa de Parceiro Affiliate',
+        copy: 'Maximize seus ganhos com um modelo de receita por niveis que recompensa performance.',
+        items: [
+          'Comissao de 25% a 50% sobre receita dos jogadores via seu codigo',
+          'Possibilidade de aumento de comissao por desempenho',
+          'Opcao de virar conta Master com +3% adicional',
+          'Contas demo para marketing ($2,000-$10,000)',
+          'Programa CPA: bonus direto de $10 por jogador qualificado'
+        ],
+        cta: 'Entrar no programa Affiliate'
+      },
+      {
+        title: 'Programa Teamcash',
+        copy: 'Seja um provedor financeiro no seu pais e ganhe comissoes em transacoes de dinheiro.',
+        items: [
+          'Ofereca servicos de deposito e saque para jogadores da sua regiao',
+          'Trabalhe diretamente com o app da empresa',
+          'Baixo investimento inicial: $50',
+          'Necessario ter 18+',
+          'Torne-se a solucao local confiavel de pagamentos'
+        ],
+        cta: 'Entrar no programa Teamcash'
+      },
+      {
+        title: 'Programa de Agente E-payment',
+        copy: 'Use solucoes de pagamento digital para atender jogadores e ganhar comissoes competitivas.',
+        items: [
+          'Processar pagamentos e transferencias digitais',
+          'Trabalhar com varias plataformas e metodos e-payment',
+          'Estrutura de comissao competitiva em todas as transacoes',
+          'Acesso a suporte tecnico dedicado',
+          'Relatorios e analytics em tempo real'
+        ],
+        cta: 'Entrar no programa E-payment'
+      }
+    ],
+    benefitsKicker: 'Vantagens',
+    benefitsTitle: 'Por que trabalhar conosco?',
+    benefitsCopy: 'Oferecemos tudo o que voce precisa para ter sucesso na parceria.',
+    benefits: [
+      { title: 'Modelo de receita comprovado', copy: 'Programas desenhados para gerar receita de varias formas.' },
+      { title: 'Suporte dedicado', copy: 'Equipe de suporte para parceiros para ajudar no seu crescimento.' },
+      { title: 'Ferramentas de marketing', copy: 'Materiais e ferramentas para promover a plataforma.' },
+      { title: 'Alcance global', copy: 'Acesse uma base internacional de usuarios e amplie seu negocio.' }
+    ],
+    faqKicker: 'Perguntas',
+    faqTitle: 'Perguntas frequentes',
+    faqCopy: 'Tem uma duvida? Talvez a resposta ja esteja aqui.',
+    faq: [
+      { q: 'O que e Melbet?', a: 'Melbet e uma plataforma global com mais de 12 anos de operacao em esportes, eSports e cassino.' },
+      { q: 'Qual a idade minima para participar?', a: 'Voce precisa ter 18 anos ou mais para participar dos programas de parceria.' },
+      { q: 'Como funciona o programa Affiliate?', a: 'Voce traz novos jogadores e recebe comissao de 25% a 50% sobre a receita deles.' },
+      { q: 'O que e Teamcash?', a: 'E um modelo em que agentes oficiais processam depositos e saques para jogadores.' },
+      { q: 'O que e o programa E-Payment?', a: 'Voce atua como agente de pagamentos digitais no seu pais.' },
+      { q: 'O que e o programa Teamcash?', a: 'Voce oferece servicos de pagamento locais e recebe comissao por transacao.' },
+      { q: 'O que e o programa CPA?', a: 'Voce recebe bonus direto de $10 por jogador qualificado.' },
+      { q: 'Vocês oferecem contas demo?', a: 'Sim, contas demo de $2,000 a $10,000 para fins de marketing.' },
+      { q: 'Qual o custo inicial para Teamcash?', a: 'Normalmente $50, podendo variar conforme o pais.' },
+      { q: 'Como trabalho como agente Teamcash?', a: 'Usando o app da Melbet para processar solicitacoes dos jogadores.' },
+      { q: 'Qual a diferenca entre Teamcash e E-Payment?', a: 'Teamcash foca em dinheiro/metodos locais; E-Payment em pagamentos digitais.' },
+      { q: 'Com quais bancos/metodos posso trabalhar?', a: 'e-wallets, transferencias bancarias e cartoes pre-pagos conforme o pais.' },
+      { q: 'Quando recebo minhas comissoes?', a: 'Pagamentos conforme cronograma acordado, semanal ou mensal.' },
+      { q: 'Quais metodos de saque estao disponiveis?', a: 'Transferencia bancaria, e-wallet e metodos locais.' },
+      { q: 'Como falar com o time de parcerias?', a: 'Por email, Telegram ou contatos na secao Contact.' },
+      { q: 'Quanto tempo leva a aprovacao?', a: 'Normalmente em 24 horas; em alguns casos pode demorar um pouco mais.' }
+    ],
+    contactKicker: 'Contato',
+    contactTitle: 'Pronto para comecar a ganhar com a Melbet?',
+    contactCopy1: 'Junte-se hoje a nossa rede de parceiros de sucesso e construa sua renda.',
+    contactCopy2: 'Pronto para aplicar? Abra o formulario de parceria e envie seus dados em minutos.',
+    contactLinks: ['Telegram', 'WhatsApp'],
+    contactButton: 'Aplicar agora'
+  },
+  contact: {
+    title: 'MelBet Partnerships | Formulario de contato',
+    description: 'Candidate-se para ser parceiro MelBet usando o formulario oficial.',
+    topCta: 'Preencher formulario',
+    heroKicker: 'Contato',
+    heroTitle: 'Torne-se parceiro MelBet',
+    heroCopy: 'Preencha o formulario abaixo. Nossa equipe respondera em ate 24 horas.',
+    labels: {
+      firstName: 'Nome *',
+      lastName: 'Sobrenome *',
+      email: 'Email *',
+      phone: 'Numero de telefone *',
+      country: 'Pais *',
+      program: 'Programa de parceria *',
+      traffic: 'Fonte de trafego / experiencia',
+      message: 'Mensagem *'
+    },
+    placeholders: {
+      traffic: 'ex.: Facebook Ads, SEO, Telegram',
+      message: 'Conte mais sobre seus objetivos e GEOs'
+    },
+    programOptions: ['Selecione um programa', 'Programa Affiliate', 'Programa Teamcash', 'Programa Agente E-payment'],
+    consentMain:
+      'Concordo com os <a href="https://melbet.com/en/information/rules/1" target="_blank" rel="noopener noreferrer">Termos e Condicoes</a> e com a <a href="https://melbet.com/en/information/rules/privacy_policy" target="_blank" rel="noopener noreferrer">Politica de Privacidade</a> *',
+    consentOptional: 'Quero receber atualizacoes sobre oportunidades e promocoes de parceria.',
+    actions: ['Enviar candidatura', 'Voltar para a pagina inicial']
+  }
+});
+
+registerLocale('turk', 'eng', {
+  lang: 'tr',
+  common: {
+    logoAria: 'MelBet ana sayfa',
+    toggleMenu: 'Menuyu ac',
+    navAria: 'Ana gezinme',
+    nav: ['Ana sayfa', 'Programlar', 'Avantajlar', 'SSS', 'Iletisim']
+  },
+  index: {
+    title: 'Melbet Ortaklik Programi',
+    description:
+      'Melbet Ortaklik Programina katilin ve Affiliate, Payment Agent ve E-payment programlariyla kazanin.',
+    topCta: 'Bugun kazanmaya basla',
+    heroKicker: 'Resmi MelBet Ortakligi',
+    heroTitle: 'Melbet ortaklik programina katilin',
+    heroCopy:
+      'Kuresel agimizin parcasi olun ve buyume odakli kapsamli ortaklik programlariyla gelir elde edin.',
+    heroButtons: ['Bugun kazanmaya basla', 'Ortaklik programlarimiz'],
+    statsTitle: 'Temel istatistikler',
+    stats: [
+      '<strong>10 000+</strong> Aktif ortak',
+      '<strong>$5M+</strong> Odenen komisyon',
+      '<strong>120+</strong> Ulke kapsami',
+      '<strong>24/7</strong> Ortak destegi'
+    ],
+    programsKicker: 'Programlar',
+    programsTitle: 'Ortaklik programlarimiz',
+    programsCopy:
+      'Yeteneklerinize uygun programi secin ve sektorun onde gelen platformlarindan biriyle kazanmaya baslayin.',
+    programs: [
+      {
+        title: 'Affiliate Ortak Programi',
+        copy: 'Performans ve buyumeyi odullendiren cok katmanli gelir modeliyle kazancinizi artirin.',
+        items: [
+          'Kodunuzla gelen oyuncu gelirinden %25-%50 komisyon',
+          'Performansa gore daha yuksek komisyon imkani',
+          'Master hesap olup +%3 ek komisyon alma firsati',
+          'Pazarlama icin demo hesaplar ($2,000-$10,000)',
+          'CPA: Nitelikli oyuncu basina dogrudan $10 bonus'
+        ],
+        cta: 'Affiliate Programina katil'
+      },
+      {
+        title: 'Teamcash Programi',
+        copy: 'Ulkenizde finansal cozum saglayicisi olun, nakit islemlerden komisyon kazanin.',
+        items: [
+          'Bolgenizdeki oyunculara yatirim/cekim hizmeti verin',
+          'Sirket uygulamasiyla dogrudan calisin',
+          'Dusuk baslangic maliyeti: $50',
+          '18+ yas zorunlu',
+          'Yerel guvenilir odeme cozumune donusun'
+        ],
+        cta: 'Teamcash Programina katil'
+      },
+      {
+        title: 'E-payment Agent Programi',
+        copy: 'Dijital odeme cozumleriyle oyunculara hizmet verin ve rekabetci komisyon kazanin.',
+        items: [
+          'Oyuncular icin dijital odeme ve transfer islemleri',
+          'Farkli e-payment platformlari ve yontemleriyle calisma',
+          'Tum islemlerde rekabetci komisyon yapisi',
+          'Ayricalikli teknik destek ekibi',
+          'Gercek zamanli raporlama ve analiz'
+        ],
+        cta: 'E-payment Programina katil'
+      }
+    ],
+    benefitsKicker: 'Avantajlar',
+    benefitsTitle: 'Neden bizimle ortak olmalisiniz?',
+    benefitsCopy: 'Ortaklik yolculugunuzda basari icin ihtiyac duydugunuz her seyi sunuyoruz.',
+    benefits: [
+      { title: 'Kanitlanmis gelir modeli', copy: 'Programlarimiz birden fazla gelir akisi olusturur.' },
+      { title: 'Ozel destek', copy: 'Ortak destek ekibimiz gelirlerinizi buyutmenize yardimci olur.' },
+      { title: 'Pazarlama araclari', copy: 'Platformu tanitmak icin kapsamli materyal ve araclara erisin.' },
+      { title: 'Kuresel erisim', copy: 'Uluslararasi kullanici tabanimizla isinizi buyutun.' }
+    ],
+    faqKicker: 'FAQ',
+    faqTitle: 'Sik sorulan sorular',
+    faqCopy: 'Bir sorunuz mu var? Muhtemelen asagida cevabi var.',
+    faq: [
+      { q: 'Melbet nedir?', a: 'Melbet spor, eSports ve casino hizmetleri sunan global bir internet platformudur.' },
+      { q: 'Yas kosulu nedir?', a: 'MelBet ortaklik programlarina katilmak icin 18 yasindan buyuk olmalisiniz.' },
+      { q: 'Affiliate Programi nasil calisir?', a: 'Yeni oyuncu getirirsiniz ve olusan gelirden %25-%50 komisyon alirsiniz.' },
+      { q: 'Teamcash nedir?', a: 'Resmi ajanlarin oyuncularin yatirim/cekim islemlerini yonettigi bir modeldir.' },
+      { q: 'E-Payment Programi nedir?', a: 'Ulkenizde dijital odeme ajani olarak calisip oyunculara odeme hizmeti verirsiniz.' },
+      { q: 'Teamcash Programi nedir?', a: 'Yerel odeme cozumleri sunar, her islemden komisyon alirsiniz.' },
+      { q: 'CPA Programi nedir?', a: 'Her nitelikli oyuncu icin dogrudan $10 bonus kazanirsiniz.' },
+      { q: 'Demo hesap var mi?', a: 'Evet, pazarlama amacli $2,000-$10,000 arasi demo hesaplar sunuyoruz.' },
+      { q: 'Teamcash baslangic maliyeti nedir?', a: 'Genellikle $50, ulkeye gore degisebilir.' },
+      { q: 'Teamcash ajani olarak nasil calisirim?', a: 'Melbet uygulamasiyla oyuncu talep ve islemlerini yonetirsiniz.' },
+      { q: 'Teamcash ile E-Payment farki nedir?', a: 'Teamcash daha cok nakit/yerel, E-payment dijital islemlere odaklanir.' },
+      { q: 'Hangi e-payment bankalariyla calisabilirim?', a: 'e-wallet, banka transferi ve on odemeli kartlarla calisabilirsiniz.' },
+      { q: 'Komisyonlar ne zaman odenir?', a: 'Anlasilan odeme takvimine gore haftalik veya aylik odeme yapilir.' },
+      { q: 'Hangi cekim yontemleri mevcut?', a: 'Banka transferi, e-wallet ve yerel yontemler ulkeye gore sunulur.' },
+      { q: 'Partnership ekibine nasil ulasirim?', a: 'Email, Telegram veya Contact bolumundeki iletisimlerden ulasabilirsiniz.' },
+      { q: 'Basvuru onayi ne kadar surer?', a: 'Genellikle 24 saat icinde, bazen biraz daha uzun surebilir.' }
+    ],
+    contactKicker: 'Iletisim',
+    contactTitle: 'Melbet ile kazanmaya baslamaya hazir misiniz?',
+    contactCopy1: 'Basarili ortak agimiza katilin ve duzenli gelir akisinizi bugun kurmaya baslayin.',
+    contactCopy2: 'Hazirsaniz formu acin ve bilgilerinizi dakikalar icinde gonderin.',
+    contactLinks: ['Telegram', 'WhatsApp'],
+    contactButton: 'Simdi basvur'
+  },
+  contact: {
+    title: 'MelBet Partnerships | Iletisim formu',
+    description: 'MelBet ortagi olmak icin resmi formu doldurup basvuru yapin.',
+    topCta: 'Formu doldur',
+    heroKicker: 'Iletisim',
+    heroTitle: 'MelBet ortagi olun',
+    heroCopy: 'Asagidaki basvuru formunu doldurun. Ekibimiz 24 saat icinde sizinle iletisime gecer.',
+    labels: {
+      firstName: 'Ad *',
+      lastName: 'Soyad *',
+      email: 'E-posta *',
+      phone: 'Telefon numarasi *',
+      country: 'Ulke *',
+      program: 'Ortaklik programi *',
+      traffic: 'Trafik kaynagi / deneyim',
+      message: 'Mesaj *'
+    },
+    placeholders: {
+      traffic: 'ornek: Facebook Ads, SEO, Telegram',
+      message: 'Hedefleriniz ve GEO planiniz hakkinda bilgi verin'
+    },
+    programOptions: ['Program secin', 'Affiliate Ortak Programi', 'Teamcash Programi', 'E-payment Agent Programi'],
+    consentMain:
+      '<a href="https://melbet.com/en/information/rules/1" target="_blank" rel="noopener noreferrer">Kullanim Kosullari</a> ve <a href="https://melbet.com/en/information/rules/privacy_policy" target="_blank" rel="noopener noreferrer">Gizlilik Politikasi</a>ni kabul ediyorum *',
+    consentOptional: 'Ortaklik firsatlari ve promosyonlarla ilgili guncellemeler almak istiyorum.',
+    actions: ['Basvuruyu gonder', 'Ana sayfaya don']
+  }
+});
+
+registerLocale('russian', 'eng', {
+  lang: 'ru',
+  common: {
+    logoAria: 'Главная MelBet',
+    toggleMenu: 'Открыть меню',
+    navAria: 'Основная навигация',
+    nav: ['Главная', 'Программы', 'Преимущества', 'Вопросы', 'Контакты']
+  },
+  index: {
+    title: 'Партнерская программа Melbet',
+    description:
+      'Присоединяйтесь к партнерской программе Melbet и зарабатывайте с Affiliate, Payment Agent и E-payment программами.',
+    topCta: 'Начни зарабатывать сегодня',
+    heroKicker: 'Официальное партнерство MelBet',
+    heroTitle: 'Присоединяйтесь к партнерской программе Melbet',
+    heroCopy:
+      'Станьте частью нашей глобальной сети и начните зарабатывать с комплексными партнерскими программами для региона MENA и не только.',
+    heroButtons: ['Начни зарабатывать сегодня', 'Наши программы'],
+    statsTitle: 'Ключевая статистика',
+    stats: [
+      '<strong>10 000+</strong> Активных партнеров',
+      '<strong>$5M+</strong> Выплачено комиссий',
+      '<strong>120+</strong> Охваченных стран',
+      '<strong>24/7</strong> Поддержка партнеров'
+    ],
+    programsKicker: 'Программы',
+    programsTitle: 'Наши партнерские программы',
+    programsCopy: 'Выберите программу, которая подходит вам, и начните зарабатывать с одной из ведущих платформ.',
+    programs: [
+      {
+        title: 'Партнерская Affiliate программа',
+        copy:
+          'Увеличивайте доход с многоуровневой моделью вознаграждений, которая поощряет результат и рост.',
+        items: [
+          'Комиссия от 25% до 50% с дохода игроков по вашему промокоду',
+          'Рост процента комиссии в зависимости от эффективности',
+          'Возможность стать Master аккаунтом и получать +3% дополнительно',
+          'Демо-аккаунты для маркетинга ($2,000-$10,000)',
+          'CPA программа: прямой бонус $10 за каждого квалифицированного игрока'
+        ],
+        cta: 'Вступить в Affiliate программу'
+      },
+      {
+        title: 'Программа Teamcash',
+        copy:
+          'Станьте поставщиком финансовых решений в своей стране и получайте комиссию с наличных транзакций.',
+        items: [
+          'Предоставляйте услуги пополнения и вывода для игроков в вашем регионе',
+          'Работайте напрямую через приложение компании',
+          'Низкий стартовый порог: $50 USD',
+          'Возраст от 18 лет',
+          'Станьте надежным локальным платежным решением для нашей платформы'
+        ],
+        cta: 'Вступить в программу Teamcash'
+      },
+      {
+        title: 'Программа агента E-payment',
+        copy:
+          'Используйте цифровые платежные решения для работы с игроками и получайте конкурентные комиссии.',
+        items: [
+          'Обрабатывайте цифровые платежи и переводы для игроков',
+          'Работайте с различными e-payment платформами и методами',
+          'Конкурентная структура комиссий по всем операциям',
+          'Доступ к выделенной технической поддержке',
+          'Отчеты и аналитика в реальном времени'
+        ],
+        cta: 'Вступить в E-payment программу'
+      }
+    ],
+    benefitsKicker: 'Преимущества',
+    benefitsTitle: 'Почему стоит работать с нами?',
+    benefitsCopy: 'Мы даем все, что нужно для успешного партнерства.',
+    benefits: [
+      {
+        title: 'Проверенная модель дохода',
+        copy: 'Наши программы построены так, чтобы вы могли получать доход из нескольких источников.'
+      },
+      {
+        title: 'Выделенная поддержка',
+        copy: 'Наша команда поддержки партнеров помогает вам быстрее расти и зарабатывать больше.'
+      },
+      {
+        title: 'Маркетинговые инструменты',
+        copy: 'Вы получаете доступ к материалам и инструментам для эффективного продвижения.'
+      },
+      {
+        title: 'Глобальный охват',
+        copy: 'Используйте международную аудиторию платформы для масштабирования бизнеса.'
+      }
+    ],
+    faqKicker: 'Вопросы',
+    faqTitle: 'Часто задаваемые вопросы',
+    faqCopy: 'Есть вопрос? Возможно, ответ уже есть ниже.',
+    faq: [
+      {
+        q: 'Что такое Melbet?',
+        a: 'Это глобальная онлайн-платформа, работающая более 12 лет и предлагающая ставки на спорт, eSports и игры казино в десятках стран.'
+      },
+      {
+        q: 'Какой возраст нужен для участия?',
+        a: 'Для участия в партнерских программах MelBet необходимо быть старше 18 лет.'
+      },
+      {
+        q: 'Как работает Affiliate программа?',
+        a: 'Вы привлекаете новых игроков в MelBet и получаете комиссию от 25% до 50% от дохода привлеченных игроков.'
+      },
+      {
+        q: 'Что такое Teamcash?',
+        a: 'Teamcash - это формат работы платежных агентов, которые помогают игрокам с пополнением и выводом средств.'
+      },
+      {
+        q: 'Что такое программа E-Payment?',
+        a: 'Вы становитесь агентом цифровых платежей в своей стране и проводите пополнения и выплаты через локальные методы.'
+      },
+      {
+        q: 'Что включает программа Teamcash?',
+        a: 'Вы предоставляете услуги пополнения/вывода игрокам вашего региона и получаете комиссию за каждую операцию.'
+      },
+      {
+        q: 'Что такое CPA программа?',
+        a: 'Это дополнительный прямой бонус $10 за каждого квалифицированного игрока помимо стандартных комиссий.'
+      },
+      {
+        q: 'Есть ли демо-аккаунты для маркетинга?',
+        a: 'Да, доступны демо-аккаунты номиналом от $2,000 до $10,000 для маркетинговых целей.'
+      },
+      {
+        q: 'Какой стартовый бюджет для Teamcash?',
+        a: 'Обычно стартовый бюджет составляет $50 USD, но может отличаться в зависимости от страны.'
+      },
+      {
+        q: 'Как работать агентом Teamcash?',
+        a: 'Вы используете приложение Melbet для обработки заявок игроков на пополнение и вывод и получаете комиссию за операции.'
+      },
+      {
+        q: 'В чем разница между Teamcash и E-Payment Agent?',
+        a: 'Teamcash чаще работает с наличными и локальными методами, а E-Payment Agent с цифровыми платежами и переводами.'
+      },
+      {
+        q: 'С какими e-payment банками можно работать?',
+        a: 'С доступными в вашей стране e-wallet, банковскими переводами и предоплаченными картами.'
+      },
+      {
+        q: 'Когда выплачиваются комиссии?',
+        a: 'Выплаты проходят по согласованному графику: обычно еженедельно для affiliate/e-payment и ежемесячно для части Teamcash агентов.'
+      },
+      {
+        q: 'Какие способы вывода доступны?',
+        a: 'Доступны банковские переводы, e-wallet и локальные методы в зависимости от страны.'
+      },
+      {
+        q: 'Как связаться с командой partnerships?',
+        a: 'Через email, Telegram или контакты в разделе Contact на сайте.'
+      },
+      {
+        q: 'Сколько длится рассмотрение заявки?',
+        a: 'Обычно до 24 часов, в отдельных случаях может занять немного больше времени.'
+      }
+    ],
+    contactKicker: 'Контакты',
+    contactTitle: 'Готовы начать зарабатывать с Melbet?',
+    contactCopy1: 'Присоединяйтесь к нашей сети успешных партнеров и начните строить стабильный доход.',
+    contactCopy2: 'Готовы подать заявку? Откройте форму на отдельной странице и отправьте данные за пару минут.',
+    contactLinks: ['Telegram', 'WhatsApp'],
+    contactButton: 'Подать заявку'
+  },
+  contact: {
+    title: 'MelBet Partnerships | Форма контакта',
+    description: 'Подайте заявку, чтобы стать партнером MelBet через официальную форму.',
+    topCta: 'Заполнить форму',
+    heroKicker: 'Контакты',
+    heroTitle: 'Станьте партнером MelBet',
+    heroCopy: 'Заполните форму ниже. Наша команда рассмотрит заявку и свяжется с вами в течение 24 часов.',
+    labels: {
+      firstName: 'Имя *',
+      lastName: 'Фамилия *',
+      email: 'Email *',
+      phone: 'Номер телефона *',
+      country: 'Страна *',
+      program: 'Партнерская программа *',
+      traffic: 'Источник трафика / опыт',
+      message: 'Сообщение *'
+    },
+    placeholders: {
+      traffic: 'например: Facebook Ads, SEO, Telegram',
+      message: 'Расскажите о ваших целях и GEO'
+    },
+    programOptions: [
+      'Выберите программу',
+      'Партнерская Affiliate программа',
+      'Программа Teamcash',
+      'Программа агента E-payment'
+    ],
+    consentMain:
+      'Я принимаю <a href="https://melbet.com/en/information/rules/1" target="_blank" rel="noopener noreferrer">Условия и положения</a> и <a href="https://melbet.com/en/information/rules/privacy_policy" target="_blank" rel="noopener noreferrer">Политику конфиденциальности</a> *',
+    consentOptional: 'Я хочу получать обновления о партнерских возможностях и промо.',
+    actions: ['Отправить заявку', 'Назад на главную']
+  }
+});
+
+const setText = (selector, text) => {
+  const element = document.querySelector(selector);
+  if (element && typeof text === 'string') element.textContent = text;
+};
+
+const setHTML = (selector, html) => {
+  const element = document.querySelector(selector);
+  if (element && typeof html === 'string') element.innerHTML = html;
+};
+
+const parseStatLine = (html) => {
+  if (typeof html !== 'string') return { value: '', label: '' };
+  const valueMatch = html.match(/<strong[^>]*>(.*?)<\/strong>/i);
+  const value = valueMatch ? valueMatch[1].trim() : '';
+  const label = html.replace(/<strong[^>]*>.*?<\/strong>/i, '').replace(/\s+/g, ' ').trim();
+  return { value, label };
+};
+
+const EXTRA_UI = {
+  eng: {
+    languageSelector: 'Language selector',
+    languageLabel: 'Language',
+    phoneTitle: 'Use digits only, for example +79293737172',
+    website: 'Website',
+    quickChat: 'Quick chat'
+  },
+  arab: {
+    languageSelector: 'اختيار اللغة',
+    languageLabel: 'اللغة',
+    phoneTitle: 'استخدم الأرقام فقط، مثال +79293737172',
+    website: 'الموقع',
+    quickChat: 'دردشة سريعة'
+  },
+  franch: {
+    languageSelector: 'Choix de la langue',
+    languageLabel: 'Langue',
+    phoneTitle: 'Utilisez uniquement des chiffres, par exemple +79293737172',
+    website: 'Site web',
+    quickChat: 'Chat rapide'
+  },
+  esp: {
+    languageSelector: 'Selector de idioma',
+    languageLabel: 'Idioma',
+    phoneTitle: 'Usa solo numeros, por ejemplo +79293737172',
+    website: 'Sitio web',
+    quickChat: 'Chat rapido'
+  },
+  farsi: {
+    languageSelector: 'انتخاب زبان',
+    languageLabel: 'زبان',
+    phoneTitle: 'فقط از اعداد استفاده کنید، مثلا +79293737172',
+    website: 'وب سایت',
+    quickChat: 'گفتگوی سریع'
+  },
+  mongol: {
+    languageSelector: 'Хэл сонгох',
+    languageLabel: 'Хэл',
+    phoneTitle: 'Зөвхөн цифр ашиглана уу, жишээ нь +79293737172',
+    website: 'Вэбсайт',
+    quickChat: 'Шуурхай чат'
+  },
+  somali: {
+    languageSelector: 'Dooro luqadda',
+    languageLabel: 'Luqad',
+    phoneTitle: 'Isticmaal tirooyin kaliya, tusaale ahaan +79293737172',
+    website: 'Website',
+    quickChat: 'Sheeko degdeg ah'
+  },
+  portug: {
+    languageSelector: 'Seletor de idioma',
+    languageLabel: 'Idioma',
+    phoneTitle: 'Use apenas numeros, por exemplo +79293737172',
+    website: 'Site',
+    quickChat: 'Chat rapido'
+  },
+  amharic: {
+    languageSelector: 'ቋንቋ ምረጥ',
+    languageLabel: 'ቋንቋ',
+    phoneTitle: 'ቁጥሮችን ብቻ ይጠቀሙ፣ ለምሳሌ +79293737172',
+    website: 'ድህረ ገጽ',
+    quickChat: 'ፈጣን ቻት'
+  },
+  turk: {
+    languageSelector: 'Dil secici',
+    languageLabel: 'Dil',
+    phoneTitle: 'Yalnizca rakam kullanin, ornegin +79293737172',
+    website: 'Web sitesi',
+    quickChat: 'Hizli sohbet'
+  },
+  russian: {
+    languageSelector: 'Выбор языка',
+    languageLabel: 'Язык',
+    phoneTitle: 'Используйте только цифры, например +79293737172',
+    website: 'Сайт',
+    quickChat: 'Быстрый чат'
+  }
+};
+
+const updateMeta = (title, description) => {
+  if (title) document.title = title;
+  const metaDescription = document.querySelector('meta[name="description"]');
+  if (metaDescription && description) metaDescription.setAttribute('content', description);
+};
+
+const applyCommon = (langData) => {
+  const extra = EXTRA_UI[document.getElementById('lang-select')?.value || 'eng'] || EXTRA_UI.eng;
+  document.documentElement.lang = langData.lang || (langData.dir === 'rtl' ? 'ar' : 'en');
+  document.documentElement.dir = langData.dir;
+
+  const logo = document.querySelector('.logo');
+  if (logo) logo.setAttribute('aria-label', langData.common.logoAria);
+
+  const menuToggle = document.querySelector('.menu-toggle');
+  if (menuToggle) menuToggle.setAttribute('aria-label', langData.common.toggleMenu);
+
+  const nav = document.querySelector('.site-nav');
+  if (nav) nav.setAttribute('aria-label', langData.common.navAria);
+
+  const navLinks = Array.from(document.querySelectorAll('.site-nav a'));
+  langData.common.nav.forEach((label, index) => {
+    if (navLinks[index]) navLinks[index].textContent = label;
+  });
+
+  const langSelect = document.getElementById('lang-select');
+  if (langSelect) langSelect.setAttribute('aria-label', extra.languageSelector);
+  const langLabel = document.querySelector('.lang-switcher .sr-only');
+  if (langLabel) langLabel.textContent = extra.languageLabel;
+};
+
+const applyIndex = (langData) => {
+  const t = langData.index;
+  const lang = document.getElementById('lang-select')?.value || 'eng';
+  const offerByLang = {
+    eng: {
+      aria: 'Get 120 percent deposit bonus',
+      title: 'Get 120% Welcome Bonus',
+      subtitle: 'Fast payout and instant start'
+    },
+    arab: {
+      aria: 'احصل على بونص ترحيبي 120 بالمئة',
+      title: 'احصل على بونص ترحيبي 120%',
+      subtitle: 'دفع سريع وبداية فورية'
+    },
+    franch: {
+      aria: 'Obtenez un bonus de bienvenue de 120 pour cent',
+      title: 'Obtenez 120% de bonus de bienvenue',
+      subtitle: 'Paiement rapide et demarrage immediat'
+    },
+    esp: {
+      aria: 'Obtén un bono de bienvenida del 120 por ciento',
+      title: 'Obten un bono de bienvenida del 120%',
+      subtitle: 'Pago rapido e inicio instantaneo'
+    },
+    farsi: {
+      aria: 'دریافت بونوس خوش آمد 120 درصد',
+      title: 'بونوس خوش آمد 120% بگیرید',
+      subtitle: 'پرداخت سریع و شروع فوری'
+    },
+    mongol: {
+      aria: '120 хувийн тавтай морил бонус авах',
+      title: '120% тавтай морил бонус аваарай',
+      subtitle: 'Хурдан төлбөр, шууд эхлэл'
+    },
+    somali: {
+      aria: 'Hel gunno soo dhaweyn 120 boqolkiiba',
+      title: 'Hel 120% gunno soo dhaweyn',
+      subtitle: 'Lacag bixin degdeg ah iyo bilow isla markiiba'
+    },
+    portug: {
+      aria: 'Ganhe bonus de boas vindas de 120 por cento',
+      title: 'Ganhe 120% de bonus de boas-vindas',
+      subtitle: 'Pagamento rapido e inicio imediato'
+    },
+    amharic: {
+      aria: '120 በመቶ የእንኳን ደህና መጡ ቦነስ ያግኙ',
+      title: '120% የእንኳን ደህና መጡ ቦነስ ያግኙ',
+      subtitle: 'ፈጣን ክፍያ እና ወዲያው መጀመር'
+    },
+    turk: {
+      aria: 'Yuzde 120 hos geldin bonusu al',
+      title: '120% Hos Geldin Bonusu Al',
+      subtitle: 'Hizli odeme ve aninda baslangic'
+    },
+    russian: {
+      aria: 'Получите приветственный бонус 120 процентов',
+      title: 'Получите приветственный бонус 120%',
+      subtitle: 'Быстрые выплаты и мгновенный старт'
+    }
+  };
+  const visualByLang = {
+    eng: {
+      left1: 'Melbet',
+      left2: 'Account',
+      center1: 'TeamCash',
+      center2: 'App',
+      right: 'Player',
+      agent: 'Agent',
+      leftTop: 'Deposits',
+      leftBottom: 'Withdrawals',
+      rightTop: 'Withdrawal',
+      rightBottom: 'Deposits',
+      downLeft: 'Commission %',
+      upRight: 'Prepayment',
+      send: 'Send payment',
+      success: '✓ Payment successful'
+    },
+    arab: {
+      left1: 'حساب',
+      left2: 'Melbet',
+      center1: 'تطبيق',
+      center2: 'TeamCash',
+      right: 'لاعب',
+      agent: 'الوكيل',
+      leftTop: 'إيداعات',
+      leftBottom: 'سحوبات',
+      rightTop: 'سحب',
+      rightBottom: 'إيداع',
+      downLeft: 'عمولة %',
+      upRight: 'دفعة مسبقة',
+      send: 'إرسال دفعة',
+      success: '✓ تمت العملية'
+    },
+    franch: {
+      left1: 'Compte',
+      left2: 'Melbet',
+      center1: 'App',
+      center2: 'TeamCash',
+      right: 'Joueur',
+      agent: 'Agent',
+      leftTop: 'Depots',
+      leftBottom: 'Retraits',
+      rightTop: 'Retrait',
+      rightBottom: 'Depots',
+      downLeft: 'Commission %',
+      upRight: 'Prepaiement',
+      send: 'Envoyer paiement',
+      success: '✓ Paiement reussi'
+    },
+    esp: {
+      left1: 'Cuenta',
+      left2: 'Melbet',
+      center1: 'App',
+      center2: 'TeamCash',
+      right: 'Jugador',
+      agent: 'Agente',
+      leftTop: 'Depositos',
+      leftBottom: 'Retiros',
+      rightTop: 'Retiro',
+      rightBottom: 'Depositos',
+      downLeft: 'Comision %',
+      upRight: 'Prepago',
+      send: 'Enviar pago',
+      success: '✓ Pago exitoso'
+    },
+    farsi: {
+      left1: 'حساب',
+      left2: 'Melbet',
+      center1: 'اپلیکیشن',
+      center2: 'TeamCash',
+      right: 'بازیکن',
+      agent: 'ایجنت',
+      leftTop: 'واریز',
+      leftBottom: 'برداشت',
+      rightTop: 'برداشت',
+      rightBottom: 'واریز',
+      downLeft: 'کمیسیون %',
+      upRight: 'پیش پرداخت',
+      send: 'ارسال پرداخت',
+      success: '✓ پرداخت موفق'
+    },
+    mongol: {
+      left1: 'Melbet',
+      left2: 'Аккаунт',
+      center1: 'TeamCash',
+      center2: 'Апп',
+      right: 'Тоглогч',
+      agent: 'Агент',
+      leftTop: 'Депозит',
+      leftBottom: 'Гаргалт',
+      rightTop: 'Гаргалт',
+      rightBottom: 'Депозит',
+      downLeft: 'Шимтгэл %',
+      upRight: 'Урьдчилгаа',
+      send: 'Төлбөр илгээх',
+      success: '✓ Төлбөр амжилттай'
+    },
+    somali: {
+      left1: 'Akoon',
+      left2: 'Melbet',
+      center1: 'App',
+      center2: 'TeamCash',
+      right: 'Ciyaaryahan',
+      agent: 'Wakiil',
+      leftTop: 'Debaaji',
+      leftBottom: 'Bixid',
+      rightTop: 'Bixid',
+      rightBottom: 'Debaaji',
+      downLeft: 'Komishan %',
+      upRight: 'Hore-u-bixin',
+      send: 'Dir lacag',
+      success: '✓ Lacagta waa guul'
+    },
+    portug: {
+      left1: 'Conta',
+      left2: 'Melbet',
+      center1: 'App',
+      center2: 'TeamCash',
+      right: 'Jogador',
+      agent: 'Agente',
+      leftTop: 'Depositos',
+      leftBottom: 'Saques',
+      rightTop: 'Saque',
+      rightBottom: 'Depositos',
+      downLeft: 'Comissao %',
+      upRight: 'Pre-pagamento',
+      send: 'Enviar pagamento',
+      success: '✓ Pagamento concluido'
+    },
+    turk: {
+      left1: 'Hesap',
+      left2: 'Melbet',
+      center1: 'Uygulama',
+      center2: 'TeamCash',
+      right: 'Oyuncu',
+      agent: 'Ajan',
+      leftTop: 'Yatirim',
+      leftBottom: 'Cekim',
+      rightTop: 'Cekim',
+      rightBottom: 'Yatirim',
+      downLeft: 'Komisyon %',
+      upRight: 'On odeme',
+      send: 'Odeme gonder',
+      success: '✓ Odeme basarili'
+    },
+    russian: {
+      left1: 'Аккаунт',
+      left2: 'Melbet',
+      center1: 'Приложение',
+      center2: 'TeamCash',
+      right: 'Игрок',
+      agent: 'Агент',
+      leftTop: 'Депозиты',
+      leftBottom: 'Выводы',
+      rightTop: 'Вывод',
+      rightBottom: 'Депозиты',
+      downLeft: 'Комиссия %',
+      upRight: 'Предоплата',
+      send: 'Отправить платеж',
+      success: '✓ Платеж выполнен'
+    },
+    amharic: {
+      left1: 'Melbet',
+      left2: 'አካውንት',
+      center1: 'TeamCash',
+      center2: 'መተግበሪያ',
+      right: 'ተጫዋች',
+      agent: 'ኤጀንት',
+      leftTop: 'ተቀማጭ',
+      leftBottom: 'ማውጫ',
+      rightTop: 'ማውጫ',
+      rightBottom: 'ተቀማጭ',
+      downLeft: 'ኮሚሽን %',
+      upRight: 'ቅድመ ክፍያ',
+      send: 'ክፍያ ላክ',
+      success: '✓ ተሳክቷል'
+    }
+  };
+  const offer = offerByLang[lang] || offerByLang.eng;
+  const visual = visualByLang[lang] || visualByLang.eng;
+  const stats = t.stats.map(parseStatLine);
+  updateMeta(t.title, t.description);
+
+  setText('.header-inner > .btn.btn-small', t.topCta);
+  setText('.hero .kicker', t.heroKicker);
+  setText('.hero h1', t.heroTitle);
+  setText('.hero .hero-copy', t.heroCopy);
+  setText('.hero .hero-actions .btn', t.heroButtons[0]);
+  setText('.hero .hero-actions .btn-ghost', t.heroButtons[1]);
+  setText('.hero-offer-content strong', offer.title);
+  setText('.hero-offer-content small', offer.subtitle);
+  const heroOffer = document.querySelector('.hero-offer');
+  if (heroOffer) heroOffer.setAttribute('aria-label', offer.aria);
+  setText('.hero-card-title', t.statsTitle);
+  t.stats.forEach((line, index) => setHTML(`.hero-card li:nth-child(${index + 1})`, line));
+  const inlineStats = Array.from(document.querySelectorAll('.hero-inline-stats span'));
+  [0, 2, 3].forEach((statIndex, index) => {
+    if (inlineStats[index] && t.stats[statIndex]) inlineStats[index].innerHTML = t.stats[statIndex];
+  });
+  setText('.hero-dashboard .hero-card-title', t.statsTitle);
+  setText('.hero-dashboard-badge', t.programsKicker);
+  setText('.hero-metric:nth-child(1) .hero-metric-label', stats[1]?.label || '');
+  setText('.hero-metric:nth-child(1) strong', stats[1]?.value || '');
+  setText('.hero-metric:nth-child(2) .hero-metric-label', stats[0]?.label || '');
+  setText('.hero-metric:nth-child(2) strong', stats[0]?.value || '');
+  setText('.hero-program-item:nth-child(1) .hero-program-name', t.programs[0]?.title || '');
+  setText('.hero-program-item:nth-child(1) strong', '25%-50%');
+  setText('.hero-program-item:nth-child(2) .hero-program-name', t.programs[1]?.title || '');
+  setText('.hero-program-item:nth-child(2) strong', '$50');
+  setText('.hero-program-item:nth-child(3) .hero-program-name', t.programs[2]?.title || '');
+  setText('.hero-program-item:nth-child(3) strong', stats[3]?.value || '24/7');
+  const inlineStatsWrap = document.querySelector('.hero-inline-stats');
+  if (inlineStatsWrap) inlineStatsWrap.setAttribute('aria-label', t.statsTitle);
+  const programStrip = document.querySelector('.hero-program-strip');
+  if (programStrip) programStrip.setAttribute('aria-label', t.programsTitle);
+  setText('#flow-node-left-text-1', visual.left1);
+  setText('#flow-node-left-text-2', visual.left2);
+  setText('#flow-node-center-text-1', visual.center1);
+  setText('#flow-node-center-text-2', visual.center2);
+  setText('#flow-node-right-text', visual.right);
+  setText('#flow-node-agent-text', visual.agent);
+  setText('#flow-label-left-top-text', visual.leftTop);
+  setText('#flow-label-left-bottom-text', visual.leftBottom);
+  setText('#flow-label-right-top-text', visual.rightTop);
+  setText('#flow-label-right-bottom-text', visual.rightBottom);
+  setText('#flow-label-down-left-text', visual.downLeft);
+  setText('#flow-label-up-right-text', visual.upRight);
+  setText('.epay-send-btn', visual.send);
+  setText('.epay-success', visual.success);
+
+  setText('#programs .section-kicker', t.programsKicker);
+  setText('#programs h2', t.programsTitle);
+  setText('#programs .hero-copy', t.programsCopy);
+  const programCards = Array.from(document.querySelectorAll('#programs .card'));
+  t.programs.forEach((program, index) => {
+    const card = programCards[index];
+    if (!card) return;
+    const title = card.querySelector('h3');
+    const copy = card.querySelector('p');
+    const items = card.querySelectorAll('ul li');
+    const cta = card.querySelector('.program-cta-link');
+    if (title) title.textContent = program.title;
+    if (copy) copy.textContent = program.copy;
+    program.items.forEach((item, itemIndex) => {
+      if (items[itemIndex]) items[itemIndex].textContent = item;
+    });
+    if (cta) cta.textContent = program.cta;
+  });
+
+  setText('#benefits .section-kicker', t.benefitsKicker);
+  setText('#benefits h2', t.benefitsTitle);
+  setText('#benefits .hero-copy', t.benefitsCopy);
+  const benefitCards = Array.from(document.querySelectorAll('#benefits .benefit-card'));
+  t.benefits.forEach((benefit, index) => {
+    const card = benefitCards[index];
+    if (!card) return;
+    const title = card.querySelector('h3');
+    const copy = card.querySelector('p');
+    if (title) title.textContent = benefit.title;
+    if (copy) copy.textContent = benefit.copy;
+  });
+
+  setText('#faq .section-kicker', t.faqKicker);
+  setText('#faq h2', t.faqTitle);
+  setText('#faq .hero-copy', t.faqCopy);
+  const faqItems = Array.from(document.querySelectorAll('#faq .faq-list details'));
+  t.faq.forEach((faq, index) => {
+    const item = faqItems[index];
+    if (!item) return;
+    const q = item.querySelector('summary');
+    const a = item.querySelector('p');
+    if (q) q.textContent = faq.q;
+    if (a) a.textContent = faq.a;
+  });
+
+  setText('#contact .section-kicker', t.contactKicker);
+  setText('#contact h2', t.contactTitle);
+  setText('#contact .contact-grid > div p:nth-of-type(1)', t.contactCopy1);
+  setText('#contact .contact-card a:nth-of-type(2)', t.contactLinks[0]);
+  setText('#contact .contact-card a:nth-of-type(3)', t.contactLinks[1]);
+  setText('#contact .contact-card .btn', t.contactButton);
+};
+
+const applyContact = (langData) => {
+  const t = langData.contact;
+  const indexTexts = langData.index || {};
+  const extra = EXTRA_UI[document.getElementById('lang-select')?.value || 'eng'] || EXTRA_UI.eng;
+  updateMeta(t.title, t.description);
+
+  setText('.header-inner > .btn.btn-small', t.topCta);
+  setText('.form-hero .section-kicker', t.heroKicker);
+  setText('.form-hero h1', t.heroTitle);
+  setText('.form-hero .hero-copy', t.heroCopy);
+
+  const firstNameLabel = document.querySelector('input[name="first_name"]')?.closest('label')?.querySelector('span');
+  const lastNameLabel = document.querySelector('input[name="last_name"]')?.closest('label')?.querySelector('span');
+  const emailLabel = document.querySelector('input[name="email"]')?.closest('label')?.querySelector('span');
+  const phoneLabel = document.querySelector('input[name="phone"]')?.closest('label')?.querySelector('span');
+  const countryLabel = document.querySelector('input[name="country"]')?.closest('label')?.querySelector('span');
+  const programLabel = document.querySelector('select[name="program"]')?.closest('label')?.querySelector('span');
+  const trafficLabel = document.querySelector('input[name="traffic_source"]')?.closest('label')?.querySelector('span');
+  const messageLabel = document.querySelector('textarea[name="message"]')?.closest('label')?.querySelector('span');
+
+  if (firstNameLabel) firstNameLabel.textContent = t.labels.firstName;
+  if (lastNameLabel) lastNameLabel.textContent = t.labels.lastName;
+  if (emailLabel) emailLabel.textContent = t.labels.email;
+  if (phoneLabel) phoneLabel.textContent = t.labels.phone;
+  if (countryLabel) countryLabel.textContent = t.labels.country;
+  if (programLabel) programLabel.textContent = t.labels.program;
+  if (trafficLabel) trafficLabel.textContent = t.labels.traffic;
+  if (messageLabel) messageLabel.textContent = t.labels.message;
+
+  const trafficInput = document.querySelector('input[name="traffic_source"]');
+  const messageInput = document.querySelector('textarea[name="message"]');
+  const phoneInput = document.querySelector('input[name="phone"]');
+  if (trafficInput) trafficInput.setAttribute('placeholder', t.placeholders.traffic);
+  if (messageInput) messageInput.setAttribute('placeholder', t.placeholders.message);
+  if (phoneInput) phoneInput.setAttribute('title', extra.phoneTitle);
+
+  const options = Array.from(document.querySelectorAll('select[name="program"] option'));
+  t.programOptions.forEach((optionText, index) => {
+    if (options[index]) options[index].textContent = optionText;
+  });
+
+  const websiteLabel = document.querySelector('input[name="website"]')?.closest('label')?.querySelector('span');
+  if (websiteLabel) websiteLabel.textContent = extra.website;
+  setHTML('.consent span', t.consentMain);
+  setText('.consent-optional span', t.consentOptional);
+  setText('.form-actions .btn[type="submit"]', t.actions[0]);
+  setText('.form-actions .btn-ghost', t.actions[1]);
+  const chatDock = document.querySelector('.chat-dock');
+  if (chatDock) chatDock.setAttribute('aria-label', extra.quickChat);
+  setText('.chat-dock-link-wa', indexTexts.contactLinks?.[1] || 'WhatsApp');
+  setText('.chat-dock-link-tg', indexTexts.contactLinks?.[0] || 'Telegram');
+};
+
+let activeLang = null;
+
+const applyLanguage = (languageCode) => {
+  const lang = SUPPORTED_LANGS.includes(languageCode) ? languageCode : 'eng';
+  if (activeLang === lang) return;
+  const langData = I18N[lang] || I18N.eng;
+  const selector = document.getElementById('lang-select');
+  if (selector) selector.value = lang;
+
+  applyCommon(langData);
+
+  const isContactPage = Boolean(document.querySelector('.partner-form'));
+  if (isContactPage) {
+    applyContact(langData);
+  } else {
+    applyIndex(langData);
+  }
+
+  activeLang = lang;
+}
+
+const initLanguageSelector = () => {
+  const selector = document.getElementById('lang-select');
+  if (!selector) return;
+
+  selector.addEventListener('change', (event) => {
+    const nextLang = event.target.value;
+    localStorage.setItem(LANG_STORAGE_KEY, nextLang);
+    applyLanguage(nextLang);
+  });
+};
+
+const startI18n = () => {
+  const savedLang = localStorage.getItem(LANG_STORAGE_KEY);
+  const lang = SUPPORTED_LANGS.includes(savedLang) ? savedLang : 'eng';
+  initLanguageSelector();
+  applyLanguage(lang);
+};
+
+startI18n();
