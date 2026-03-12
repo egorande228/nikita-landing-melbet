@@ -1,13 +1,13 @@
-# Hossam MelBet Landing Setup Guide
+# Nikita MelBet Landing Setup Guide
 
 Этот файл нужен как единый источник правды для нового проекта.
-Рабочая папка: `/Users/egorande/Documents/Melbet landing Akram/melbet-landing-separate`
-GitHub: `https://github.com/egorande228/hossam-melbet-landing`
+Рабочая папка: `/Users/egorande/Documents/Melbet landing Akram/nikita-melbet-landing`
+GitHub: `<PASTE_NEW_REPO_URL>`
 
 ## 1. Локальный запуск
 
 ```bash
-cd "/Users/egorande/Documents/Melbet landing Akram/melbet-landing-separate"
+cd "/Users/egorande/Documents/Melbet landing Akram/nikita-melbet-landing"
 python3 -m http.server 5600
 ```
 
@@ -112,4 +112,3 @@ git push origin main
 - `form_sent` отмечен как key event;
 - sitemap принят в Search Console;
 - URL главной и `/contact` отправлены на индексацию.
-
