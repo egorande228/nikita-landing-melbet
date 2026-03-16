@@ -1,10 +1,11 @@
 .form-hero {
   padding-top: 96px;
-  padding-bottom: 36px;
+  padding-bottom: 42px;
 }
 
 .form-hero .container {
   text-align: center;
+  max-width: 1080px;
 }
 
 .form-hero .section-kicker,
@@ -16,17 +17,24 @@
 .form-hero .hero-copy {
   margin-left: auto;
   margin-right: auto;
-  max-width: 760px;
+  max-width: 880px;
+  font-size: clamp(1.08rem, 1.7vw, 1.32rem);
+  line-height: 1.7;
 }
 
 .partner-form {
   max-width: 900px;
   margin: 0 auto;
-  padding: 24px;
-  border-radius: 18px;
-  border: 1px solid rgba(255, 211, 61, 0.34);
-  background: linear-gradient(165deg, rgba(22, 22, 22, 0.96), rgba(8, 8, 8, 0.98));
-  box-shadow: 0 16px 38px rgba(10, 7, 2, 0.34);
+  padding: 28px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.08)),
+    linear-gradient(145deg, rgba(225, 234, 255, 0.88), rgba(196, 216, 255, 0.78));
+  box-shadow:
+    0 28px 54px rgba(16, 43, 103, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.42);
+  backdrop-filter: blur(14px);
 }
 
 .form-grid {
@@ -47,24 +55,26 @@
 .partner-form span {
   font-size: 0.85rem;
   font-weight: 700;
-  color: #e6d094;
+  color: #1f3d7a;
+  letter-spacing: 0.01em;
 }
 
 .partner-form input,
 .partner-form select,
 .partner-form textarea {
   width: 100%;
-  border: 1px solid rgba(255, 211, 61, 0.3);
-  background: rgba(247, 244, 232, 0.92);
-  color: #181818;
-  border-radius: 12px;
-  padding: 12px 14px;
+  border: 1px solid rgba(88, 128, 214, 0.28);
+  background: rgba(255, 255, 255, 0.92);
+  color: #182748;
+  border-radius: 16px;
+  padding: 14px 16px;
   font: inherit;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.54);
 }
 
 .partner-form input::placeholder,
 .partner-form textarea::placeholder {
-  color: rgba(24, 24, 24, 0.56);
+  color: rgba(24, 39, 72, 0.5);
 }
 
 .partner-form input[type="tel"] {
@@ -86,8 +96,8 @@
 .partner-form select:focus,
 .partner-form textarea:focus {
   outline: none;
-  border-color: rgba(255, 211, 61, 0.76);
-  box-shadow: 0 0 0 3px rgba(255, 211, 61, 0.18);
+  border-color: rgba(58, 112, 232, 0.72);
+  box-shadow: 0 0 0 3px rgba(58, 112, 232, 0.14);
 }
 
 .partner-form textarea {
@@ -113,11 +123,11 @@
 .consent span {
   font-size: 0.84rem;
   font-weight: 500;
-  color: #d8c28b;
+  color: #29416d;
 }
 
 .consent a {
-  color: #ffd33d;
+  color: #1b5bd7;
   text-decoration: none;
 }
 
@@ -160,15 +170,15 @@
 }
 
 .form-status.is-loading {
-  color: #ffe292;
+  color: #173f8d;
 }
 
 .form-status.is-success {
-  color: #b6ffbe;
+  color: #167345;
 }
 
 .form-status.is-error {
-  color: #ffc4bf;
+  color: #c13f3f;
 }
 
 @media (max-width: 800px) {
@@ -177,6 +187,6 @@
   }
 
   .partner-form {
-    padding: 18px;
+    padding: 20px;
   }
 }
