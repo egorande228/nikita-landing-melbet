@@ -1,15 +1,74 @@
-<svg width="220" height="120" viewBox="0 0 220 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="420" height="300" viewBox="0 0 420 300" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="g2" x1="34" y1="18" x2="182" y2="102" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFD33D"/>
-      <stop offset="1" stop-color="#FFB800"/>
+    <linearGradient id="bg" x1="38" y1="24" x2="355" y2="266" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#275B1D"/>
+      <stop offset="0.55" stop-color="#184D18"/>
+      <stop offset="1" stop-color="#0F3111"/>
     </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(257 73) rotate(90) scale(118 165)">
+      <stop stop-color="#FFE87B" stop-opacity="0.65"/>
+      <stop offset="1" stop-color="#FFE87B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bill" x1="0" y1="0" x2="116" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5F4CF"/>
+      <stop offset="1" stop-color="#B8BF8D"/>
+    </linearGradient>
+    <linearGradient id="card" x1="108" y1="102" x2="286" y2="228" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A7751"/>
+      <stop offset="1" stop-color="#0A3F2D"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFE36A"/>
+      <stop offset="1" stop-color="#D5A500"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="420" height="300" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#071608" flood-opacity="0.36"/>
+    </filter>
   </defs>
-  <rect x="10" y="10" width="200" height="100" rx="20" fill="#0E2650"/>
-  <rect x="40" y="34" width="140" height="54" rx="10" fill="#1A3A72"/>
-  <rect x="52" y="48" width="62" height="8" rx="4" fill="url(#g2)"/>
-  <rect x="52" y="62" width="46" height="8" rx="4" fill="#5E7FB3"/>
-  <circle cx="148" cy="61" r="15" fill="url(#g2)"/>
-  <path d="M148 53V69" stroke="#0E2650" stroke-width="3" stroke-linecap="round"/>
-  <path d="M140 61H156" stroke="#0E2650" stroke-width="3" stroke-linecap="round"/>
+
+  <rect width="420" height="300" rx="32" fill="url(#bg)"/>
+  <rect width="420" height="300" rx="32" fill="url(#glow)"/>
+  <path d="M-10 252C95 229 145 217 207 220C286 224 332 248 431 219" stroke="url(#gold)" stroke-opacity="0.45" stroke-width="3" stroke-linecap="round"/>
+  <path d="M22 103C90 93 147 97 205 122C264 147 318 156 428 131" stroke="url(#gold)" stroke-opacity="0.24" stroke-width="3" stroke-linecap="round"/>
+
+  <g opacity="0.16">
+    <circle cx="41" cy="48" r="3" fill="#FFF0A6"/>
+    <circle cx="70" cy="71" r="2" fill="#FFF0A6"/>
+    <circle cx="351" cy="51" r="3" fill="#FFF0A6"/>
+    <circle cx="378" cy="96" r="2" fill="#FFF0A6"/>
+    <circle cx="351" cy="248" r="4" fill="#FFF0A6"/>
+    <circle cx="67" cy="255" r="4" fill="#FFF0A6"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <g transform="translate(54 116) rotate(-19 58 29)">
+      <rect width="116" height="58" rx="8" fill="url(#bill)"/>
+      <rect x="10" y="8" width="96" height="42" rx="6" stroke="#6A7A54" stroke-opacity="0.55" stroke-width="1.5"/>
+      <circle cx="58" cy="29" r="13" fill="#7C8B5F" fill-opacity="0.22"/>
+    </g>
+    <g transform="translate(86 96) rotate(-10 58 29)">
+      <rect width="122" height="62" rx="8" fill="url(#bill)"/>
+      <rect x="10" y="8" width="102" height="46" rx="6" stroke="#6A7A54" stroke-opacity="0.55" stroke-width="1.5"/>
+      <circle cx="61" cy="31" r="13" fill="#7C8B5F" fill-opacity="0.22"/>
+    </g>
+    <g transform="translate(134 84) rotate(8 58 29)">
+      <rect width="124" height="62" rx="8" fill="url(#bill)"/>
+      <rect x="10" y="8" width="104" height="46" rx="6" stroke="#6A7A54" stroke-opacity="0.55" stroke-width="1.5"/>
+      <circle cx="62" cy="31" r="13" fill="#7C8B5F" fill-opacity="0.22"/>
+    </g>
+    <g transform="translate(48 152) rotate(7 71 35)">
+      <rect width="152" height="74" rx="16" fill="url(#card)"/>
+      <rect x="1.5" y="1.5" width="149" height="71" rx="14.5" stroke="#E7CF6A" stroke-opacity="0.4" stroke-width="3"/>
+      <text x="23" y="30" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="13" font-weight="700">TEAMCASH</text>
+      <text x="23" y="51" fill="#F2F7EC" font-family="Arial, sans-serif" font-size="10.5" letter-spacing="2">1234 5678 9012 3456</text>
+      <text x="23" y="64" fill="#FFE26E" font-family="Arial, sans-serif" font-size="8.5" font-weight="700">LOCAL PARTNER</text>
+      <rect x="109" y="50" width="22" height="14" rx="3" fill="url(#gold)"/>
+      <path d="M120 24C123 24 126 27 126 30V37" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M126 25C130 26 132 29 132 33V39" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.82"/>
+      <path d="M132 27C136 29 138 33 138 37V42" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.64"/>
+    </g>
+  </g>
+
+  <circle cx="36" cy="256" r="9" fill="#FFDA54" fill-opacity="0.68"/>
+  <circle cx="382" cy="239" r="7" fill="#FFDA54" fill-opacity="0.55"/>
 </svg>

@@ -16,11 +16,11 @@ const I18N = {
         'Join Melbet Partnerships Program and start earning with Affiliate, Payment Agent and E-payment programs.',
       topCta: 'Start Earning Today',
       heroKicker: 'MelBet Official Partnership',
-      heroTitle: 'Join Melbet Partnerships Program',
+      heroTitle: 'Join the MelBet partnership program',
       heroCopy:
-        'Become part of our global network and start earning with our comprehensive partnership programs designed for success in the MENA region and beyond.',
-      heroButtons: ['Start Earning Today', 'Our Partnership Programs'],
-      statsTitle: 'Key Stats',
+        'Become part of our global network and start earning with full partnership solutions built for MENA markets and international growth.',
+      heroButtons: ['Start Earning Today', 'Our Programs'],
+      statsTitle: 'Key Statistics',
       stats: [
         '<strong>10 000+</strong> Active Partners',
         '<strong>$5M+</strong> Paid in Commissions',
@@ -28,48 +28,39 @@ const I18N = {
         '<strong>24/7</strong> Partner Support'
       ],
       programsKicker: 'Programs',
-      programsTitle: 'Our Partnership Programs',
+      programsTitle: 'Our Partnership Solutions',
       programsCopy:
-        'Choose the program that matches your skills and start generating revenue with one of the leading platforms in the industry.',
+        'Choose the cooperation format that fits your business and market best.',
       programs: [
         {
-          title: 'Affiliate Partner Program',
-          copy:
-            'Maximize your earnings with our multi-tiered revenue model designed to reward performance and growth.',
+          title: 'Affiliate Program',
+          copy: 'Maximize your earnings with our multi-tiered revenue model designed to reward performance and growth.',
           items: [
-            '25% to 50% commission on player revenue through your promo code',
-            'Potential for increased commission rates based on performance',
-            'Opportunity to become a Master Account with 3% additional commission',
-            'Demo accounts available for marketing purposes ($2,000-$10,000)',
-            'CPA Program: $10 direct bonus for each qualifying player'
+            'Up to 50% revenue share',
+            'Master account with +3% bonus',
+            'CPA model with direct player bonus'
           ],
-          cta: 'Join Affiliate Program'
+          cta: 'Start Working'
         },
         {
-          title: 'Teamcash program',
-          copy:
-            'Become a financial solution provider in your country and earn commissions on cash transactions.',
+          title: 'Teamcash Program',
+          copy: 'Become a financial solution provider in your country and earn commissions on cash transactions.',
           items: [
-            'Provide deposit and withdrawal services to players in your region',
-            'Work directly with our company app',
-            'Low startup investment of $50 USD',
-            'Must be 18+ years old',
-            'Be the trusted local payment solution for our platform'
+            'Deposit and withdrawal processing',
+            'Starting entry from $50',
+            'Own local payment network'
           ],
-          cta: 'Join Teamcash program'
+          cta: 'Join Now'
         },
         {
-          title: 'E-payment Agent Program',
-          copy:
-            'Leverage digital payment solutions to serve players and earn competitive commissions.',
+          title: 'E-Payment Program',
+          copy: 'Leverage digital payment solutions to serve players and earn competitive commissions.',
           items: [
-            'Process digital payments and transfers for players',
-            'Work with various e-payment platforms and methods',
-            'Competitive commission structure on all transactions',
-            'Access to dedicated support team for technical issues',
-            'Real-time reporting and analytics dashboard'
+            'Online player payments',
+            'Multiple payment systems',
+            'Analytics and support'
           ],
-          cta: 'Join E-payment Program'
+          cta: 'Become an Agent'
         }
       ],
       benefitsKicker: 'Benefits',
@@ -1503,47 +1494,38 @@ registerLocale('russian', 'eng', {
       '<strong>24/7</strong> Поддержка партнеров'
     ],
     programsKicker: 'Программы',
-    programsTitle: 'Наши партнерские программы',
-    programsCopy: 'Выберите программу, которая подходит вам, и начните зарабатывать с одной из ведущих платформ.',
+    programsTitle: 'Наши партнерские решения',
+    programsCopy: 'Выберите формат сотрудничества, который лучше всего подходит вашему бизнесу и рынку.',
     programs: [
       {
-        title: 'Партнерская Affiliate программа',
-        copy:
-          'Увеличивайте доход с многоуровневой моделью вознаграждений, которая поощряет результат и рост.',
+        title: 'Affiliate программа',
+        copy: 'Увеличивайте доход с многоуровневой моделью вознаграждений, которая поощряет результат и рост.',
         items: [
-          'Комиссия от 25% до 50% с дохода игроков по вашему промокоду',
-          'Рост процента комиссии в зависимости от эффективности',
-          'Возможность стать Master аккаунтом и получать +3% дополнительно',
-          'Демо-аккаунты для маркетинга ($2,000-$10,000)',
-          'CPA программа: прямой бонус $10 за каждого квалифицированного игрока'
+          'До 50% дохода',
+          'Master-аккаунт и +3% бонус',
+          'CPA бонус за игрока'
         ],
-        cta: 'Вступить в Affiliate программу'
+        cta: 'Начать работу'
       },
       {
         title: 'Программа Teamcash',
-        copy:
-          'Станьте поставщиком финансовых решений в своей стране и получайте комиссию с наличных транзакций.',
+        copy: 'Станьте поставщиком финансовых решений в своей стране и получайте комиссию с наличных транзакций.',
         items: [
-          'Предоставляйте услуги пополнения и вывода для игроков в вашем регионе',
-          'Работайте напрямую через приложение компании',
-          'Низкий стартовый порог: $50 USD',
-          'Возраст от 18 лет',
-          'Станьте надежным локальным платежным решением для нашей платформы'
+          'Пополнение и вывод средств',
+          'Депозит от $50',
+          'Собственная сеть платежей'
         ],
-        cta: 'Вступить в программу Teamcash'
+        cta: 'Присоединиться'
       },
       {
-        title: 'Программа агента E-payment',
-        copy:
-          'Используйте цифровые платежные решения для работы с игроками и получайте конкурентные комиссии.',
+        title: 'E-Payment программа',
+        copy: 'Используйте цифровые платежные решения для работы с игроками и получайте конкурентные комиссии.',
         items: [
-          'Обрабатывайте цифровые платежи и переводы для игроков',
-          'Работайте с различными e-payment платформами и методами',
-          'Конкурентная структура комиссий по всем операциям',
-          'Доступ к выделенной технической поддержке',
-          'Отчеты и аналитика в реальном времени'
+          'Онлайн-платежи игроков',
+          'Разные платёжные системы',
+          'Аналитика и поддержка'
         ],
-        cta: 'Вступить в E-payment программу'
+        cta: 'Стать агентом'
       }
     ],
     benefitsKicker: 'Преимущества',
@@ -1809,6 +1791,19 @@ const applyCommon = (langData) => {
 const applyIndex = (langData) => {
   const t = langData.index;
   const lang = document.getElementById('lang-select')?.value || 'eng';
+  const affiliatePanelTitles = {
+    eng: 'Affiliate Earnings',
+    arab: 'أرباح الأفلييت',
+    franch: 'Gains Affiliate',
+    esp: 'Ganancias Affiliate',
+    farsi: 'درآمد افیلیت',
+    mongol: 'Affiliate орлого',
+    somali: 'Dakhliga Affiliate',
+    portug: 'Ganhos Affiliate',
+    amharic: 'የAffiliate ገቢ',
+    turk: 'Affiliate Kazanci',
+    russian: 'Доход Affiliate'
+  };
   const offerByLang = {
     eng: {
       aria: 'Get 120 percent deposit bonus',
@@ -2045,7 +2040,6 @@ const applyIndex = (langData) => {
     }
   };
   const offer = offerByLang[lang] || offerByLang.eng;
-  const visual = visualByLang[lang] || visualByLang.eng;
   const stats = t.stats.map(parseStatLine);
   updateMeta(t.title, t.description);
 
@@ -2059,57 +2053,25 @@ const applyIndex = (langData) => {
   setText('.hero-offer-content small', offer.subtitle);
   const heroOffer = document.querySelector('.hero-offer');
   if (heroOffer) heroOffer.setAttribute('aria-label', offer.aria);
-  setText('.hero-card-title', t.statsTitle);
-  t.stats.forEach((line, index) => setHTML(`.hero-card li:nth-child(${index + 1})`, line));
-  const inlineStats = Array.from(document.querySelectorAll('.hero-inline-stats span'));
-  [0, 2, 3].forEach((statIndex, index) => {
-    if (inlineStats[index] && t.stats[statIndex]) inlineStats[index].innerHTML = t.stats[statIndex];
-  });
-  setText('.hero-dashboard .hero-card-title', t.statsTitle);
-  setText('.hero-dashboard-badge', t.programsKicker);
-  setText('.hero-metric:nth-child(1) .hero-metric-label', stats[1]?.label || '');
-  setText('.hero-metric:nth-child(1) strong', stats[1]?.value || '');
-  setText('.hero-metric:nth-child(2) .hero-metric-label', stats[0]?.label || '');
-  setText('.hero-metric:nth-child(2) strong', stats[0]?.value || '');
-  setText('.hero-program-item:nth-child(1) .hero-program-name', t.programs[0]?.title || '');
-  setText('.hero-program-item:nth-child(1) strong', '25%-50%');
-  setText('.hero-program-item:nth-child(2) .hero-program-name', t.programs[1]?.title || '');
-  setText('.hero-program-item:nth-child(2) strong', '$50');
-  setText('.hero-program-item:nth-child(3) .hero-program-name', t.programs[2]?.title || '');
-  setText('.hero-program-item:nth-child(3) strong', stats[3]?.value || '24/7');
-  const inlineStatsWrap = document.querySelector('.hero-inline-stats');
-  if (inlineStatsWrap) inlineStatsWrap.setAttribute('aria-label', t.statsTitle);
-  const programStrip = document.querySelector('.hero-program-strip');
-  if (programStrip) programStrip.setAttribute('aria-label', t.programsTitle);
-  setText('#flow-node-left-text-1', visual.left1);
-  setText('#flow-node-left-text-2', visual.left2);
-  setText('#flow-node-center-text-1', visual.center1);
-  setText('#flow-node-center-text-2', visual.center2);
-  setText('#flow-node-right-text', visual.right);
-  setText('#flow-node-agent-text', visual.agent);
-  setText('#flow-label-left-top-text', visual.leftTop);
-  setText('#flow-label-left-bottom-text', visual.leftBottom);
-  setText('#flow-label-right-top-text', visual.rightTop);
-  setText('#flow-label-right-bottom-text', visual.rightBottom);
-  setText('#flow-label-down-left-text', visual.downLeft);
-  setText('#flow-label-up-right-text', visual.upRight);
-  setText('.epay-send-btn', visual.send);
-  setText('.epay-success', visual.success);
+  setText('.hero-stat-title', t.statsTitle);
+  t.stats.forEach((line, index) => setHTML(`.hero-stat-list li:nth-child(${index + 1})`, line));
 
   setText('#programs .section-kicker', t.programsKicker);
   setText('#programs h2', t.programsTitle);
   setText('#programs .hero-copy', t.programsCopy);
-  const programCards = Array.from(document.querySelectorAll('#programs .card'));
+  setText('.card-program-affiliate .program-panel-title', affiliatePanelTitles[lang] || affiliatePanelTitles.eng);
+  const programCards = Array.from(document.querySelectorAll('#programs .card-program'));
   t.programs.forEach((program, index) => {
     const card = programCards[index];
     if (!card) return;
     const title = card.querySelector('h3');
-    const copy = card.querySelector('p');
-    const items = card.querySelectorAll('ul li');
-    const cta = card.querySelector('.program-cta-link');
+    const items = card.querySelectorAll('.program-list li');
+    const cta = card.querySelector('.program-card-cta');
     if (title) title.textContent = program.title;
-    if (copy) copy.textContent = program.copy;
-    program.items.forEach((item, itemIndex) => {
+    Array.from(items).forEach((item) => {
+      item.textContent = '';
+    });
+    program.items.slice(0, items.length).forEach((item, itemIndex) => {
       if (items[itemIndex]) items[itemIndex].textContent = item;
     });
     if (cta) cta.textContent = program.cta;
@@ -2147,6 +2109,10 @@ const applyIndex = (langData) => {
   setText('#contact .contact-card a:nth-of-type(2)', t.contactLinks[0]);
   setText('#contact .contact-card a:nth-of-type(3)', t.contactLinks[1]);
   setText('#contact .contact-card .btn', t.contactButton);
+  const chatDock = document.querySelector('.chat-dock');
+  if (chatDock) chatDock.setAttribute('aria-label', extra.quickChat);
+  setText('.chat-dock-link-wa', t.contactLinks?.[1] || 'WhatsApp');
+  setText('.chat-dock-link-tg', t.contactLinks?.[0] || 'Telegram');
 };
 
 const applyContact = (langData) => {
