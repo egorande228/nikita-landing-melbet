@@ -14,10 +14,16 @@
   text-align: center;
 }
 
+.form-hero h1 {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .form-hero .hero-copy {
   margin-left: auto;
   margin-right: auto;
-  max-width: 880px;
+  max-width: 840px;
   font-size: clamp(1.08rem, 1.7vw, 1.32rem);
   line-height: 1.7;
 }
